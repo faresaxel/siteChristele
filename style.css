@@ -76,10 +76,13 @@ h4 {
     justify-content: space-around;
     margin-top: 10px;
     flex-wrap: wrap;
+	
+	 
 }
 
 .service {
     width: 18%;
+
     background-color: #fff;
     padding: 17px;
     border-radius: 8px;
@@ -91,7 +94,7 @@ h4 {
     cursor: pointer;
     transition: transform 0.3s ease, box-shadow 0.3s ease, width 0.3s ease;
     margin-bottom: 20px;
-    height: auto; /* Permet au bloc de grandir en fonction du contenu */
+    height: 150px; /* Permet au bloc de grandir en fonction du contenu */
     display: flex;
     flex-direction: column;
     justify-content: space-between;
@@ -99,9 +102,9 @@ h4 {
 
 /* Agrandissement en largeur au survol */
 .service:hover {
-    transform: scale(1.05) translateY(-5px); /* Garde l'agrandissement en hauteur */
+    transform: scale(1.20) translateY(-35px); /* Garde l'agrandissement en hauteur */
     width: 25%;  /* Change cette valeur pour ajuster l'agrandissement en largeur */
-    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.15);
+    box-shadow: 0 100px 20px rgba(0, 0, 0, 0.15);
 }
 
 .service h3 {

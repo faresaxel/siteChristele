@@ -91,6 +91,10 @@ h4 {
     cursor: pointer;
     transition: transform 0.3s ease, box-shadow 0.3s ease;
     margin-bottom: 20px;
+    height: auto; /* Permet au bloc de grandir en fonction du contenu */
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
 }
 
 .service:hover {
@@ -116,8 +120,7 @@ h4 {
     color: #555;
     opacity: 0;
     transition: opacity 0.3s ease;
-    max-height: 200px; /* Limite la hauteur de la description pour éviter le débordement */
-    overflow: auto;  /* Permet de scroller si le texte est trop long */
+    margin-bottom: 10px; /* Ajout d'un espace en bas pour la description */
 }
 
 /* Affichage de la description au survol */
@@ -303,4 +306,29 @@ footer {
 }
 
 /* Ajouter des transitions pour les éléments texte */
-.header-wrapper .container h1, .header-wrapper .container p
+.header-wrapper .container h1, .header-wrapper .container p {
+    transition: opacity 0.5s ease-in-out, transform 0.5s ease-in-out;
+}
+
+/* Adaptation pour les petits écrans */
+@media (max-width: 768px) {
+    .services-list {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .service {
+        width: 90%;
+    }
+
+    .coach-photo {
+        width: 150px;
+        height: 150px;
+    }
+}
+
+@media (max-width: 480px) {
+    .service {
+        width: 100%;
+    }
+}

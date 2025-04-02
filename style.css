@@ -330,7 +330,7 @@ footer {
 
     /* Lors du survol des services sur mobile, l'agrandissement vertical peut être appliqué */
     .service:hover {
-        transform: scale(2.05) translateY(-5px) scaleY(1.1); /* Agrandissement vertical */
+        transform: scale(2.05) translateY(-25px) scaleY(2.1); /* Agrandissement vertical */
     }
 
     .coach-photo {

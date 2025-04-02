@@ -98,7 +98,7 @@ h4 {
 }
 
 .service:hover {
-    transform: scale(2.05) translateY(-5px);
+    transform: scale(1.50) translateY(-5px);
     box-shadow: 0 10px 20px rgba(0, 0, 0, 0.15);
 }
 

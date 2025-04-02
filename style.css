@@ -104,9 +104,6 @@ h4 {
     box-shadow: 0 10px 20px rgba(0, 0, 0, 0.15);
 }
 
-
-
-
 .service h3 {
     font-size: 18px;
     margin-bottom: 10px;
@@ -324,7 +321,13 @@ footer {
     }
 
     .service {
-        width: 90%;
+        width: 90%;  /* Réduit la largeur pour mobile */
+        margin-bottom: 20px;  /* Ajoute un peu de marge entre les services */
+    }
+
+    /* Lors du survol des services sur mobile, l'agrandissement horizontal peut être appliqué */
+    .service:hover {
+        transform: scale(1.05) translateY(-5px) scaleX(1.1); /* Agrandissement horizontal */
     }
 
     .coach-photo {
@@ -335,6 +338,10 @@ footer {
 
 @media (max-width: 480px) {
     .service {
-        width: 100%;
+        width: 100%;  /* Prend toute la largeur pour les très petits écrans */
+    }
+
+    .service:hover {
+        transform: scale(1.05) translateY(-5px) scaleX(1.1); /* Un peu plus d'agrandissement pour les très petits écrans */
     }
 }

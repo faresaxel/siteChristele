@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Coaching Professionnel</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<!-- En-tête avec le nom et le slogan -->
+<header class="header-wrapper">
+    <div class="container">
+	<link href="https://fonts.googleapis.com/css2?family=Lora:wght@400;700&family=Montserrat:wght@600&display=swap" rel="stylesheet">
+	  
+        <h1 class="header-title">Coaching Professionnel</h1>
+        
+    </div>
+</header>
+
+
+	
+
+<!-- Section À propos -->
+<section id="about" style="background: #f4f7f6; padding: 60px 0;">
+    <div class="content-wrapper" style="max-width: 1200px; margin: 0 auto;">
+        
+        <div class="about-content" style="display: flex; align-items: center; justify-content: space-between; gap: 40px;">
+            <img src="images/coaching-pro.jpg" alt="Photo du Coach" class="coach-photo" style="width: 30%; border-radius: 30px; box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);">
+            <div class="about-text" style="flex: 1; font-family: 'Lora', serif; color: #555; line-height: 1.7; text-align: justify;">
+                <p style="font-size: 1.2em;">Que vous soyez en pleine recherche de sens, en train de changer de métier ou simplement désireux d’atteindre de nouveaux objectifs dans votre carrière, il est normal de se sentir parfois perdu face à ces enjeux. Ayant moi-même traversé une reconversion il y a plus de 15 ans, je comprends parfaitement les défis, les doutes et les incertitudes que cela peut engendrer.</p>
+                <p style="font-size: 1.2em;">C’est pourquoi je mets mon expérience et mes compétences à votre service pour vous aider à franchir ce cap avec sérénité. Mon approche est centrée sur la clarification de vos choix, l’identification de vos talents et l’alignement de votre carrière avec votre véritable potentiel. Ensemble, nous allons définir un parcours qui vous ressemble et qui vous permette de vous épanouir pleinement dans votre vie professionnelle.</p>
+            </div>
+        </div>
+    </div>
+</section>
+
+
+ <!-- Section détaillée -->
+<section id="about" style="background: #f4f7f6; padding: 60px 0;">
+    <div class="content-wrapper" style="max-width: 1200px; margin: 0 auto;">
+        <h2 style="font-family: 'Montserrat', sans-serif; text-align: center; font-size: 2.5em; color:  #4a4a4a; margin-bottom: 40px;">Pourquoi travailler avec moi ?</h2>
+        <div class="about-content" style="display: flex; align-items: center; justify-content: space-between; gap: 40px;">
+           
+            <div class="about-text" style="flex: 1; font-family: 'Lora', serif; color: #555; line-height: 1.7; text-align: justify;">
+                <p style="font-size: 1.15em; margin-bottom: 20px;">La première étape essentielle dans tout processus de coaching est la prise de conscience de soi. Pour bien se comprendre, il est important de se connaître à un niveau profond, tant sur le plan émotionnel, comportemental que sur celui des croyances. Cela inclut :</p>
+                <ul style="font-size: 1.15em; margin-left: 30px; list-style-type: disc;">
+                    <li><strong>Une écoute bienveillante et sans jugement, pour comprendre vos enjeux et vos attentes.</strong></li>
+                    <li><strong>Une expertise en gestion de transition professionnelle, pour vous offrir un accompagnement personnalisé.</strong></li>
+                    <li><strong>Des outils pratiques et concrets pour renforcer votre confiance et mettre en place des actions efficaces.</strong></li>
+                    <li><strong>Un soutien constant pour transformer vos doutes en certitudes et vous propulser vers de nouvelles opportunités.</strong></li>
+                </ul>
+				
+				<p style="font-size: 1.15em; margin-top: 20px;">Que vous soyez à un carrefour ou en pleine réflexion, je vous invite à prendre le temps de redéfinir votre trajectoire professionnelle avec une personne qui a déjà traversé ce chemin. Ensemble, nous pouvons faire de cette étape une réelle opportunité de transformation.</p>
+            </div>
+        </div>
+    </div>
+</section>
+
+
+
+
+    <!-- Pied de page -->
+<footer style="background: linear-gradient(to right, #9c27b0, #0d47a1);; color: white; text-align: center; padding: 30px 0;">
+    <div class="container" style="max-width: 1200px; margin: 0 auto;">
+        <p style="font-family: 'Helvetica', sans-serif; font-size: 1.1em;">&copy; 2025 Coaching avec Christèle HACHETTE. Tous droits réservés.</p>
+    </div>
+</footer>
+
+
+<script>
+        // Sélection des services
+        const services = document.querySelectorAll('.service');
+
+        // Ajoute un écouteur d'événement de survol à chaque service
+        services.forEach(service => {
+            service.addEventListener('mouseenter', () => {
+                // Réinitialiser la hauteur de toutes les bulles
+                services.forEach(innerService => {
+                    innerService.style.height = '150px';
+                });
+                // Agrandir la bulle survolée
+                service.style.height = '300px';
+            });
+
+            service.addEventListener('mouseleave', () => {
+                // Réinitialiser la hauteur de la bulle survolée
+                service.style.height = '150px';
+            });
+        });
+    </script>
+
+</body>
+</html>

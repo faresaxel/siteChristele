@@ -1,0 +1,308 @@
+/* Réinitialisation des marges et du padding */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f5f5f5;
+    color: #333;
+}
+
+.container {
+    width: 80%;
+    margin: 0 auto;
+}
+
+header {
+    background-color: #3f51b5;  /* Bleu Indigo */
+    color: white;
+    padding: 40px 0;
+    text-align: center;
+}
+
+header h1 {
+    font-size: 36px;
+}
+
+header p {
+    font-size: 18px;
+    margin-top: 10px;
+}
+
+section {
+    padding: 40px 0;
+}
+
+h2 {
+	text-align: center;
+    font-size: 32px;
+    margin-bottom: 20px;
+    color: #3f51b5;  /* Bleu Indigo */
+}
+
+h4 {
+	text-align: center; /* Centrer le texte horizontalement */
+    margin: 0 auto;     /* Optionnel, pour s'assurer que le bloc du titre est centré */
+    font-size: 28px;
+    margin-bottom: 20px;
+    color: #3f51b5;  /* Bleu Indigo */
+}
+
+.about-content {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.coach-photo {
+    width: 200px;
+    height: 350px;
+    border-radius: 50%;
+    object-fit: cover;
+}
+
+.about-text {
+    width: 60%;
+}
+
+
+
+/* Style général des services */
+.services-list {
+    display: flex;
+    justify-content: space-around;
+    margin-top: 10px;
+}
+
+.service {
+    width: 18%;
+    background-color: #fff;
+    padding: 17px;
+    border-radius: 8px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    text-align: center;
+    border-left: 5px solid #3f51b5;  /* Bleu Indigo */
+    position: relative;
+    overflow: hidden;
+    cursor: pointer;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.service:hover {
+    transform: scale(1.30) translateY(-5px); /* Zoom léger et décalage vertical */
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.15); /* Ombre plus marquée */
+    transition: transform 0.3s ease, box-shadow 0.3s ease; /* Transition fluide */
+}
+
+.service h3 {
+    font-size: 18px;
+    margin-bottom: 10px;
+    color: #3f51b5;  /* Bleu Indigo */
+}
+
+/* Description en dessous */
+.service-description {
+    display: none;
+    background-color: #f5f5f5;
+    padding: 15px;
+    margin-top: 15px;
+    border-radius: 8px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    font-size: 13px;
+    color: #555;  
+    transition: opacity 0.3s ease;
+}
+
+/* Affichage de la description au survol */
+.service:hover .service-description {
+    display: block;
+    opacity: 1;
+
+}
+
+/* Amélioration de l’apparence de la description */
+.service-description p {
+    font-style: italic;
+    text-align: center;
+	
+}
+
+/* Style des vidéos */
+.video-gallery-wrapper {
+    position: relative;
+    display: flex;
+    justify-content: center;
+}
+
+
+
+.video-gallery {
+    display: flex;
+    overflow-x: auto;
+    gap: 30px;
+    justify-content: flex-start;
+    padding-bottom: 20px;
+}
+
+.video-item {
+    background-color: #fff;
+    border-radius: 22px;
+    overflow: hidden;
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.1);
+    position: relative;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    min-width: 280px;
+    max-width: 500px;
+	
+    flex-shrink: 0;
+}
+  
+   
+   .video-frame_m {
+        position: relative;
+        overflow: hidden;
+        padding-top: 70.25%; /* Pour garder un ratio de 16:9 */
+        width: 400px;   
+   }
+	
+	.video-iframe {
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+    }
+.video-item:hover {
+    transform: translateY(-20px);
+    box-shadow: 0 12px 24px rgba(0, 0, 0, 0.2);
+}
+
+.video-hover-text {
+    display: none;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background-color: rgba(0, 0, 0, 0.7);
+    color: white;
+    padding: 10px;
+    border-radius: 8px;
+    text-align: center;
+}
+
+.video-item:hover .video-hover-text {
+    display: block;
+}
+
+/* Formulaires */
+form input, form textarea {
+    width: 100%;
+    padding: 10px;
+    margin: 10px 0;
+    border-radius: 5px;
+    border: 1px solid #ddd;
+}
+
+form button {
+    padding: 10px 20px;
+    background-color: #3f51b5;  /* Bleu Indigo */
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+form button:hover {
+    background-color: #303f9f;  /* Une teinte plus foncée de Bleu Indigo */
+}
+
+/* Footer */
+footer {
+    background-color: #3f51b5;  /* Bleu Indigo */
+    color: white;
+    padding: 20px;
+    text-align: center;
+}
+
+
+  /* Conteneur de la page principale (l'impression de 2 pages) */
+        .content-wrapper {
+            max-width: 1200px;
+            margin: 50px auto;
+            padding: 30px;
+            background-color: rgba(255, 255, 255, 0.8); /* Transparence */
+            border-radius: 10px;
+            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+        }
+	
+		/* Wrapper pour l'en-tête avec effet */
+.header-wrapper {
+    background: linear-gradient(to right, #9c27b0, #0d47a1);
+    color: white;
+    text-align: center;
+    padding: 50px 0;
+    position: relative;
+    overflow: hidden; /* Cache tout ce qui dépasse */
+    box-shadow: 0 8px 24px rgba(0, 0, 0, 0.2); /* Ombre pour un effet de profondeur */
+    transition: all 0.5s ease-in-out;
+}
+
+/* Conteneur */
+.header-wrapper .container {
+    max-width: 1200px;
+    margin: 0 auto;
+    position: relative;
+    z-index: 2; /* Permet de rendre le contenu visible par-dessus l'effet */
+}
+
+/* Titre */
+.header-title {
+    font-family: 'Arial', sans-serif;
+    font-size: 2.5em;
+    margin-bottom: 15px;
+    text-shadow: 2px 2px 6px rgba(0, 0, 0, 0.2);
+    position: relative;
+    z-index: 2; /* Permet de garder le titre devant */
+    opacity: 0;
+    transform: translateY(50px);
+    animation: fadeInUp 1s forwards;
+}
+
+/* Sous-titre */
+.header-subtitle {
+    font-family: 'Helvetica', sans-serif;
+    font-size: 1.2em;
+    line-height: 1.5;
+    margin: 0 auto;
+    width: 80%;
+    text-shadow: 1px 1px 4px rgba(0, 0, 0, 0.2);
+    position: relative;
+    z-index: 2;
+    opacity: 0;
+    transform: translateY(50px);
+    animation: fadeInUp 1.2s forwards;
+    animation-delay: 0.2s;
+}
+
+/* Animation de l'apparition du titre et du sous-titre */
+@keyframes fadeInUp {
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+/* Effet lors du survol de l'en-tête */
+.header-wrapper:hover {
+    background: linear-gradient(to right, #9c27b0, #0d47a1); /* Changement du gradient au survol */
+    transform: scale(1.05); /* Agrandissement léger */
+    box-shadow: 0 16px 32px rgba(0, 0, 0, 0.3); /* Ombre plus prononcée au survol */
+}
+
+/* Ajouter des transitions pour les éléments texte */
+.header-wrapper .container h1, .header-wrapper .container p {
+    transition: opacity 0.5s ease-in-out, transform 0.5s ease-in-out;
+}

@@ -328,9 +328,9 @@ footer {
         margin-bottom: 20px;  /* Ajoute un peu de marge entre les services */
     }
 
-    /* Lors du survol des services sur mobile, l'agrandissement horizontal peut être appliqué */
+    /* Lors du survol des services sur mobile, l'agrandissement vertical peut être appliqué */
     .service:hover {
-        transform: scale(1.05) translateY(-5px) scaleX(1.1); /* Agrandissement horizontal */
+        transform: scale(1.05) translateY(-5px) scaleY(1.1); /* Agrandissement vertical */
     }
 
     .coach-photo {
@@ -345,6 +345,6 @@ footer {
     }
 
     .service:hover {
-        transform: scale(1.05) translateY(-5px) scaleX(1.1); /* Un peu plus d'agrandissement pour les très petits écrans */
+        transform: scale(1.05) translateY(-5px) scaleY(1.1); /* Agrandissement vertical */; /* Un peu plus d'agrandissement pour les très petits écrans */
     }
 }

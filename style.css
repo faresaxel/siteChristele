@@ -327,15 +327,13 @@ footer {
     /* Supprime les effets de survol pour mobile */
     .service:hover {
         transform: none;   /* Supprime l'effet de transformation */
-       width: 300px;  /* Réduit la largeur pour mobile */
-		height: 50px; /* Permet au bloc de grandir en fonction du contenu */  
-   }
+        width: 40%;         /* Garde la largeur pour mobile */
+    }
 
     /* Si tu veux que l'élément prenne toute la largeur sur mobile, tu peux ajouter cette ligne */
     .service {
-        width: 300px;  /* Réduit la largeur pour mobile */
-		height: 50px; /* Permet au bloc de grandir en fonction du contenu */  
-   }
+        width: 40%;  /* Réduit la largeur pour mobile */
+    }
 }
 
 @media (max-width: 480px) {
@@ -349,13 +347,12 @@ footer {
     /* Supprime les effets de survol pour mobile */
     .service:hover {
         transform: none;   /* Supprime l'effet de transformation */
-        width: 300px;  /* Réduit la largeur pour mobile */
-		height: 50px; /* Permet au bloc de grandir en fonction du contenu */
-	}
+        width: 90%;         /* Garde la largeur pour mobile */
+    }
 
     /* Si tu veux que l'élément prenne toute la largeur sur mobile, tu peux ajouter cette ligne */
     .service {
-        width: 300px;  /* Réduit la largeur pour mobile */
-		height: 50px; /* Permet au bloc de grandir en fonction du contenu */
+        width: 90%;  /* Réduit la largeur pour mobile */
+		
     }
 }

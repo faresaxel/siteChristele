@@ -89,7 +89,7 @@ h4 {
     position: relative;
     overflow: hidden;
     cursor: pointer;
-    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    transition: transform 0.3s ease, box-shadow 0.3s ease, width 0.3s ease;
     margin-bottom: 20px;
     height: auto; /* Permet au bloc de grandir en fonction du contenu */
     display: flex;
@@ -97,10 +97,15 @@ h4 {
     justify-content: space-between;
 }
 
+/* Agrandissement en largeur au survol */
 .service:hover {
-    transform: scale(1.50) translateY(-5px);
+    transform: scale(1.05) translateY(-5px); /* Garde l'agrandissement en hauteur */
+    width: 25%;  /* Change cette valeur pour ajuster l'agrandissement en largeur */
     box-shadow: 0 10px 20px rgba(0, 0, 0, 0.15);
 }
+
+
+
 
 .service h3 {
     font-size: 18px;
@@ -119,6 +124,7 @@ h4 {
     font-size: 13px;
     color: #555;
     opacity: 0;
+	 display: flex;
     transition: opacity 0.3s ease;
     margin-bottom: 10px; /* Ajout d'un espace en bas pour la description */
 }

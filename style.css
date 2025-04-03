@@ -324,12 +324,9 @@ footer {
 		height: 65px; 
 		
     }
-    .menu-item {
-        height: 65px; /* Taille normale */
-        transition: all 0.3s ease;
-    }
+ 
 
-    .menu-item.active {
+    .service.active {
         height: 150px; /* Taille agrandie lorsqu'on clique */
         width: 90%; 
 	}
@@ -342,7 +339,7 @@ footer {
     }
 
     /* Affiche le texte uniquement pour l'élément actif */
-    .menu-item.active .service-description {
+    .service.active .service-description {
         display: block;
         opacity: 1;
     }

@@ -1,5 +1,5 @@
 // Sélectionne toutes les bulles
-const items = document.querySelectorAll('.menu-item');
+const items = document.querySelectorAll('.service');
 
 // Vérifie si l'utilisateur est sur mobile
 const isMobile = window.matchMedia("(max-width: 768px)").matches;

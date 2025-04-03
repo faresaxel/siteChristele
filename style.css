@@ -334,7 +334,7 @@ footer {
     /* Si tu veux que l'élément prenne toute la largeur sur mobile, tu peux ajouter cette ligne */
     .service {
         width: 90%;  /* Réduit la largeur pour mobile */
-        height: 200px;
+        height: 100px;
 	}
 }
 
@@ -356,7 +356,7 @@ footer {
     /* Si tu veux que l'élément prenne toute la largeur sur mobile, tu peux ajouter cette ligne */
     .service {
         width: 90%;  /* Réduit la largeur pour mobile */
-		height: 200px; 
+		height: 100px; 
 		
     }
 }

@@ -325,7 +325,7 @@ footer {
 		
     }
     .menu-item {
-        height: 100px; /* Taille normale */
+        height: 65px; /* Taille normale */
         transition: all 0.3s ease;
     }
 

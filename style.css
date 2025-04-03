@@ -318,6 +318,12 @@ footer {
 
 /* Par défaut sur mobile, affiche la description sans hover */
 @media (max-width: 768px) {
+/* Si tu veux que l'élément prenne toute la largeur sur mobile, tu peux ajouter cette ligne */
+    .service {
+        width: 90%;  /* Réduit la largeur pour mobile */
+		height: 65px; 
+		
+    }
     .menu-item {
         height: 100px; /* Taille normale */
         transition: all 0.3s ease;

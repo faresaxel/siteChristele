@@ -8,26 +8,33 @@ items.forEach(item => {
     if (!isMobile) {
         // Gestion du survol pour ordinateur
         item.addEventListener('mouseenter', () => {
-            // Réinitialise la hauteur de toutes les bulles
+            // Réinitialise la hauteur et masque les textes de toutes les bulles
             items.forEach(innerItem => {
-                innerItem.style.height = '100px'; // Retour à la taille initiale
+                innerItem.style.height = '100px';
+                innerItem.querySelector(".service-description").style.display = "none";
             });
-            // Agrandit la hauteur de la bulle survolée
+            // Agrandit la hauteur et affiche le texte de la bulle survolée
             item.style.height = '150px';
+            item.querySelector(".service-description").style.display = "block";
         });
 
         item.addEventListener('mouseleave', () => {
-            // Réinitialise la hauteur lorsque la souris quitte
+            // Réinitialise la hauteur et masque le texte lorsque la souris quitte
             item.style.height = '100px';
+            item.querySelector(".service-description").style.display = "none";
         });
     } else {
         // Gestion du clic pour mobile
         item.addEventListener('click', () => {
-            // Supprime l'agrandissement de toutes les bulles
-            items.forEach(innerItem => innerItem.classList.remove("active"));
+            // Réinitialise toutes les bulles et masque les textes
+            items.forEach(innerItem => {
+                innerItem.classList.remove("active");
+                innerItem.querySelector(".service-description").style.display = "none";
+            });
 
-            // Ajoute la classe active uniquement à la bulle cliquée
+            // Active uniquement la bulle cliquée et affiche son texte
             item.classList.add("active");
+            item.querySelector(".service-description").style.display = "block";
         });
     }
 });

@@ -318,28 +318,29 @@ footer {
 
 /* Par défaut sur mobile, affiche la description sans hover */
 @media (max-width: 768px) {
-	/* Style général des services */
-	
-	/* Si tu veux que l'élément prenne toute la largeur sur mobile, tu peux ajouter cette ligne */
-    .service {
-        width: 90%;  /* Réduit la largeur pour mobile */
-		height: 65px; 
-		
-    }
-	
-      .menu-item {
-        height: 65px; /* Taille normale */
-		width: 90%;
+    .menu-item {
+        height: 100px; /* Taille normale */
         transition: all 0.3s ease;
     }
 
     .menu-item.active {
-		width: 90%;
-        height: 200px; /* Taille agrandie lorsqu'on clique */
+        height: 150px; /* Taille agrandie lorsqu'on clique */
     }
-	
-	
+
+    /* Cache le texte par défaut */
+    .service-description {
+        display: none;
+        opacity: 0;
+        transition: opacity 0.3s ease;
+    }
+
+    /* Affiche le texte uniquement pour l'élément actif */
+    .menu-item.active .service-description {
+        display: block;
+        opacity: 1;
+    }
 }
+
 
 @media (max-width: 480px) {
      {

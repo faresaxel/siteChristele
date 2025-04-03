@@ -18,16 +18,19 @@ items.forEach(item => {
     });
 });
 
-// Sélectionne tous les éléments de type .service
+// Sélection des services
 const services = document.querySelectorAll('.service');
 
-// Ajoute un écouteur d'événements sur chaque élément
+// Ajoute un écouteur d'événement pour chaque service
 services.forEach(service => {
     service.addEventListener('click', () => {
         // Supprime la classe active de tous les services
-        services.forEach(s => s.classList.remove('active'));
+        services.forEach(innerService => {
+            innerService.classList.remove('active');
+        });
         
-        // Ajoute la classe active au service cliqué
+        // Ajoute la classe active à l'élément cliqué
         service.classList.add('active');
     });
 });
+

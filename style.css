@@ -319,14 +319,7 @@ footer {
 /* Par défaut sur mobile, affiche la description sans hover */
 @media (max-width: 768px) {
 	/* Style général des services */
-   .services-list {
-    display: block;
-    justify-content: space-around;
-    margin-top: 10px;
-    flex-wrap: wrap;
-	
-	 
-}
+
     .service-description {
         display: block;  /* Affiche la description directement */
         opacity: 1;      /* Assure que la description est visible */
@@ -346,17 +339,16 @@ footer {
         height: 65px;
 	}
 	
+	/* Applique l'effet d'agrandissement uniquement à l'élément activé */
+    .service.active {
+        width: 90%;  /* Garde la largeur pour mobile */
+        height: 200px;  /* Hauteur agrandie lors du clic */
+    }
 }
 
 @media (max-width: 480px) {
      {
 
- .services-list {
-    display: block;
-    justify-content: space-around;
-    margin-top: 10px;
-   flex-wrap: wrap;
-   }
 
 		 
     .service-description {

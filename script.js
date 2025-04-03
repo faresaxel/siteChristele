@@ -18,19 +18,20 @@ items.forEach(item => {
     });
 });
 
-// Ajoute un écouteur d'événement de survol à chaque bulle
-service.forEach(service => {
+// Sélection des services
+const services = document.querySelectorAll('.service');
+
+// Ajoute un écouteur d'événement pour chaque service
+services.forEach(service => {
     service.addEventListener('click', () => {
-        // Lorsque la souris entre dans une bulle, réinitialise la hauteur de toutes les bulles
-        service.forEach(innerItem => {
-            innerItem.style.height = '100px'; // Retour à la taille initiale
+        // Supprime la classe active de tous les services
+        services.forEach(innerService => {
+            innerService.classList.remove('active');
         });
-        // Agrandit la hauteur de la bulle survolée
-        service.style.height = '150px';
-    });
-    
-    item.addEventListener('mouseleave', () => {
-        // Lorsque la souris quitte la bulle, réinitialise la hauteur de toutes les bulles
-        service.style.height = '100px'; // Retour à la taille initiale
+        
+        // Ajoute la classe active à l'élément cliqué
+        service.classList.add('active');
     });
 });
+
+

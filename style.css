@@ -327,18 +327,13 @@ footer {
 		
     }
 	
-	.service-description {
-        display: block;  /* Affiche la description directement */
-        opacity: 1;      /* Assure que la description est visible */
-        height: auto;    /* S'assure que la hauteur s'adapte au contenu */
-    }
-
       .menu-item {
         height: 65px; /* Taille normale */
         transition: all 0.3s ease;
     }
 
     .menu-item.active {
+		width: 90%;
         height: 200px; /* Taille agrandie lorsqu'on clique */
     }
 	

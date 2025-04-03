@@ -22,16 +22,20 @@ items.forEach(item => {
 const services = document.querySelectorAll('.service');
 
 // Ajoute un écouteur d'événement pour chaque service
-services.forEach(service => {
-    service.addEventListener('click', () => {
-        // Supprime la classe active de tous les services
-        services.forEach(innerService => {
-            innerService.classList.remove('active');
+
+document.addEventListener("DOMContentLoaded", function () {
+    const services = document.querySelectorAll(".service");
+
+    services.forEach(service => {
+        service.addEventListener("click", function () {
+            // Retirer la classe active de toutes les bulles
+            services.forEach(s => s.classList.remove("active"));
+            
+            // Ajouter la classe active uniquement à l'élément cliqué
+            this.classList.add("active");
         });
-        
-        // Ajoute la classe active à l'élément cliqué
-        service.classList.add('active');
     });
 });
+
 
 

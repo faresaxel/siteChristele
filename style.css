@@ -326,23 +326,17 @@ footer {
         height: auto;    /* S'assure que la hauteur s'adapte au contenu */
     }
 
-    /* Supprime les effets de survol pour mobile */
-    .service:hover {
-        transform: none;   /* Supprime l'effet de transformation */
-        width: 90%;         /* Garde la largeur pour mobile */
-        height: 200px;
-	}
-
-    /* Si tu veux que l'élément prenne toute la largeur sur mobile, tu peux ajouter cette ligne */
+   /* Style par défaut des bulles */
     .service {
-        width: 90%;  /* Réduit la largeur pour mobile */
+        width: 65px;  /* Taille initiale */
         height: 65px;
-	}
-	
-	/* Applique l'effet d'agrandissement uniquement à l'élément activé */
+        transition: all 0.3s ease; /* Animation fluide */
+    }
+
+    /* Applique l'effet d'agrandissement uniquement à l'élément activé */
     .service.active {
-        width: 90%;  /* Garde la largeur pour mobile */
-        height: 200px;  /* Hauteur agrandie lors du clic */
+        width: 90%;
+        height: 200px;
     }
 }
 

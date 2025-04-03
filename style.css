@@ -320,29 +320,14 @@ footer {
 @media (max-width: 768px) {
 	/* Style général des services */
 
-    .service-description {
-        display: block;  /* Affiche la description directement */
-        opacity: 1;      /* Assure que la description est visible */
-        height: auto;    /* S'assure que la hauteur s'adapte au contenu */
+      .menu-item {
+        height: 65px; /* Taille normale */
+        transition: all 0.3s ease;
     }
 
-    /* Supprime les effets de survol pour mobile */
-    .service:hover {
-        transform: none;   /* Supprime l'effet de transformation */
-        width: 90%;         /* Garde la largeur pour mobile */
-        height: 200px;
-	}
-
-    /* Si tu veux que l'élément prenne toute la largeur sur mobile, tu peux ajouter cette ligne */
-    .service {
-        width: 90%;  /* Réduit la largeur pour mobile */
-        height: 65px;
-	}
-	/* Affichage de la description au survol */
-    .service:hover .service-description {
-    display: block;
-    opacity: 1;
-}
+    .menu-item.active {
+        height: 150px; /* Taille agrandie lorsqu'on clique */
+    }
 	
 	
 }

@@ -331,7 +331,8 @@ footer {
 
     .menu-item.active {
         height: 150px; /* Taille agrandie lorsqu'on clique */
-    }
+        width: 90%; 
+	}
 
     /* Cache le texte par défaut */
     .service-description {

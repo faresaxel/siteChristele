@@ -338,6 +338,11 @@ footer {
         width: 90%;  /* Réduit la largeur pour mobile */
         height: 65px;
 	}
+	/* Affichage de la description au survol */
+    .service:hover .service-description {
+    display: block;
+    opacity: 1;
+}
 	
 	
 }

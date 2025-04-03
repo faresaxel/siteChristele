@@ -17,3 +17,17 @@ items.forEach(item => {
         item.style.height = '100px'; // Retour à la taille initiale
     });
 });
+
+// Sélectionne tous les éléments de type .service
+const services = document.querySelectorAll('.service');
+
+// Ajoute un écouteur d'événements sur chaque élément
+services.forEach(service => {
+    service.addEventListener('click', () => {
+        // Supprime la classe active de tous les services
+        services.forEach(s => s.classList.remove('active'));
+        
+        // Ajoute la classe active au service cliqué
+        service.classList.add('active');
+    });
+});

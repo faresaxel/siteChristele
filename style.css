@@ -319,7 +319,7 @@ footer {
 /* Par défaut sur mobile, affiche la description sans hover */
 @media (max-width: 768px) {
     .service-description {
-        display: flex;  /* Affiche la description directement */
+        display: block;  /* Affiche la description directement */
         opacity: 1;      /* Assure que la description est visible */
         height: auto;    /* S'assure que la hauteur s'adapte au contenu */
     }
@@ -336,12 +336,17 @@ footer {
         width: 90%;  /* Réduit la largeur pour mobile */
         height: 65px;
 	}
+	  /* Applique l'effet d'agrandissement uniquement à l'élément activé */
+    .service.active {
+        width: 90%;  /* Garde la largeur pour mobile */
+        height: 200px;  /* Hauteur agrandie lors du clic */
+    }
 }
 
 @media (max-width: 480px) {
      {
     .service-description {
-        display: flex;  /* Affiche la description directement */
+        display: block;  /* Affiche la description directement */
         opacity: 1;      /* Assure que la description est visible */
         height: auto;    /* S'assure que la hauteur s'adapte au contenu */
     }
@@ -358,5 +363,11 @@ footer {
         width: 90%;  /* Réduit la largeur pour mobile */
 		height: 65px; 
 		
+    }
+	
+	  /* Applique l'effet d'agrandissement uniquement à l'élément activé */
+    .service.active {
+        width: 90%;  /* Garde la largeur pour mobile */
+        height: 200px;  /* Hauteur agrandie lors du clic */
     }
 }

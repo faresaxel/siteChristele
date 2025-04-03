@@ -18,24 +18,7 @@ items.forEach(item => {
     });
 });
 
-// Sélection des services
-const services = document.querySelectorAll('.service');
 
-// Ajoute un écouteur d'événement pour chaque service
-
-document.addEventListener("DOMContentLoaded", function () {
-    const services = document.querySelectorAll(".service");
-
-    services.forEach(service => {
-        service.addEventListener("click", function () {
-            // Retirer la classe active de toutes les bulles
-            services.forEach(s => s.classList.remove("active"));
-            
-            // Ajouter la classe active uniquement à l'élément cliqué
-            this.classList.add("active");
-        });
-    });
-});
 
 
 

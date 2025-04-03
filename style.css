@@ -329,6 +329,7 @@ footer {
 	
       .menu-item {
         height: 65px; /* Taille normale */
+		width: 90%;
         transition: all 0.3s ease;
     }
 

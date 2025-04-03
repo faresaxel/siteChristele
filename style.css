@@ -316,7 +316,7 @@ footer {
     transition: opacity 0.5s ease-in-out, transform 0.5s ease-in-out;
 }
 
-/* Par défaut sur mobile, les services sont affichés normalement */
+/* Par défaut sur mobile, affiche la description sans hover */
 @media (max-width: 768px) {
     .service-description {
         display: block;  /* Affiche la description directement */
@@ -324,33 +324,47 @@ footer {
         height: auto;    /* S'assure que la hauteur s'adapte au contenu */
     }
 
+    /* Supprime les effets de survol pour mobile */
+    .service:hover {
+        transform: none;   /* Supprime l'effet de transformation */
+        width: 90%;         /* Garde la largeur pour mobile */
+        height: 200px;
+	}
+
+    /* Si tu veux que l'élément prenne toute la largeur sur mobile, tu peux ajouter cette ligne */
     .service {
         width: 90%;  /* Réduit la largeur pour mobile */
-        height: 150px; /* Hauteur par défaut */
-        transition: height 0.3s ease; /* Transition douce pour l'agrandissement */
-    }
-
-    /* Applique un agrandissement uniquement à l'élément actif (cliqué) */
-    .service.active {
-        height: 300px; /* Hauteur agrandie lors du clic */
-    }
+        height: 65px;
+	}
+	
 }
 
 @media (max-width: 480px) {
+     {
     .service-description {
         display: block;  /* Affiche la description directement */
         opacity: 1;      /* Assure que la description est visible */
         height: auto;    /* S'assure que la hauteur s'adapte au contenu */
     }
 
-    .service {
-        width: 90%;  /* Réduit la largeur pour mobile */
-        height: 150px; /* Hauteur par défaut */
-        transition: height 0.3s ease; /* Transition douce pour l'agrandissement */
+    /* Supprime les effets de survol pour mobile */
+    .service:hover {
+        transform: none;   /* Supprime l'effet de transformation */
+        width: 90%; 
+        height: 200px;         /* Garde la largeur pour mobile */
     }
 
-    /* Applique l'agrandissement uniquement à l'élément actif (cliqué) */
-    .service.active {
-        height: 300px; /* Hauteur agrandie lors du clic */
+    /* Si tu veux que l'élément prenne toute la largeur sur mobile, tu peux ajouter cette ligne */
+    .service {
+        width: 90%;  /* Réduit la largeur pour mobile */
+		height: 65px; 
+		
     }
+	
+	  /* Applique l'effet d'agrandissement uniquement à l'élément activé */
+    .service.active {
+        width: 90%;  /* Garde la largeur pour mobile */
+        height: 200px;  /* Hauteur agrandie lors du clic */
+    }
+}
 }

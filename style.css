@@ -319,6 +319,19 @@ footer {
 /* Par défaut sur mobile, affiche la description sans hover */
 @media (max-width: 768px) {
 	/* Style général des services */
+	
+	/* Si tu veux que l'élément prenne toute la largeur sur mobile, tu peux ajouter cette ligne */
+    .service {
+        width: 90%;  /* Réduit la largeur pour mobile */
+		height: 65px; 
+		
+    }
+	
+	.service-description {
+        display: block;  /* Affiche la description directement */
+        opacity: 1;      /* Assure que la description est visible */
+        height: auto;    /* S'assure que la hauteur s'adapte au contenu */
+    }
 
       .menu-item {
         height: 65px; /* Taille normale */
@@ -326,7 +339,7 @@ footer {
     }
 
     .menu-item.active {
-        height: 150px; /* Taille agrandie lorsqu'on clique */
+        height: 200px; /* Taille agrandie lorsqu'on clique */
     }
 	
 	

@@ -326,9 +326,12 @@ footer {
     }
 
     .coach-photo {
-        width: 130%;
-        max-width: 400px;
-    }
+    width: 200px;
+    height: 300px;
+    border-radius: 50%; 
+    object-fit: cover; 
+    margin-right: 20px;
+}
 
  .about-text {
     width: 80%;
@@ -379,10 +382,13 @@ footer {
         text-align: center;
     }
 
-    .coach-photo {
-        width: 130%;
-        max-width: 300px;
-    }
+  .coach-photo {
+    width: 200px;
+    height: 300px;
+    border-radius: 50%; 
+    object-fit: cover; 
+    margin-right: 20px;
+}
 
  .about-text {
     width: 80%;

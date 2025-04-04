@@ -380,14 +380,13 @@ footer {
     }
 
     .coach-photo {
-        width: 80%;
+        width: 130%;
         max-width: 250px;
     }
 
-    .about-text {
-        font-size: 1.1em;
-        text-align: justify;
-    }
+ .about-text {
+    width: 80%;
+}
 /* Si tu veux que l'élément prenne toute la largeur sur mobile, tu peux ajouter cette ligne */
     .service {
         width: 90%;  /* Réduit la largeur pour mobile */

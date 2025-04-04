@@ -59,8 +59,8 @@ h4 {
 }
 
 .coach-photo {
-    width: 200px;
-    height: 300px;
+    width: 700px;
+    height: 700px;
     border-radius: 50%; 
     object-fit: cover; 
     margin-right: 20px;
@@ -321,9 +321,9 @@ footer {
 	
 .coach-photo {
         width: 300px /* L’image prend 90% de la largeur de l’écran */
-        max-width: 300px; /* Elle ne dépassera jamais 300px */
-        height: auto; /* Hauteur ajustée automatiquement pour garder les proportions */
-        display: block; /* Évite tout comportement inline */
+       /* max-width: 300px; /* Elle ne dépassera jamais 300px */
+        height: 300px; /* Hauteur ajustée automatiquement pour garder les proportions */
+        /*display: block; /* Évite tout comportement inline */
         margin: 0 auto; /* Centre l’image */
     }
 	.about-content {
@@ -362,13 +362,12 @@ footer {
 @media (max-width: 480px) {
 	
 .coach-photo {
-        width: 300px; /* L’image prend 90% de la largeur de l’écran */
-        max-width: 300px; /* Elle ne dépassera jamais 300px */
-        height: auto; /* Hauteur ajustée automatiquement pour garder les proportions */
-        display: block; /* Évite tout comportement inline */
+        width: 300px /* L’image prend 90% de la largeur de l’écran */
+       /* max-width: 300px; /* Elle ne dépassera jamais 300px */
+        height: 300px; /* Hauteur ajustée automatiquement pour garder les proportions */
+        /*display: block; /* Évite tout comportement inline */
         margin: 0 auto; /* Centre l’image */
     }
-
 	.about-content {
         flex-direction: column;
         gap: 20px;

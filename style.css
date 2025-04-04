@@ -320,10 +320,10 @@ footer {
 @media (max-width: 768px) {
 	
 .coach-photo {
-        width: 300px /* L’image prend 90% de la largeur de l’écran */
-       /* max-width: 300px; /* Elle ne dépassera jamais 300px */
+        width: 300px; /* L’image prend 90% de la largeur de l’écran */
+        max-width: 300px; /* Elle ne dépassera jamais 300px */
         height: 300px; /* Hauteur ajustée automatiquement pour garder les proportions */
-        /*display: block; /* Évite tout comportement inline */
+        display: block; /* Évite tout comportement inline */
         margin: 0 auto; /* Centre l’image */
     }
 	   .about-content {
@@ -363,10 +363,10 @@ footer {
 @media (max-width: 480px) {
 	
 .coach-photo {
-        width: 300px /* L’image prend 90% de la largeur de l’écran */
-       /* max-width: 300px; /* Elle ne dépassera jamais 300px */
+        width: 300px; /* L’image prend 90% de la largeur de l’écran */
+        max-width: 300px; /* Elle ne dépassera jamais 300px */
         height: 300px; /* Hauteur ajustée automatiquement pour garder les proportions */
-        /*display: block; /* Évite tout comportement inline */
+        display: block; /* Évite tout comportement inline */
         margin: 0 auto; /* Centre l’image */
     }
 	   .about-content {

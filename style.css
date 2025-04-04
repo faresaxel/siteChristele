@@ -326,7 +326,7 @@ footer {
     }
 
   .coach-photo {
-        width: 90%; /* Sur mobile, elle prend 90% de la largeur */
+        width: 250px /* Sur mobile, elle prend 90% de la largeur */
         max-width: 250px; /* Mais ne dépasse pas 250px */
     }
 
@@ -366,7 +366,7 @@ footer {
     }
 
   .coach-photo {
-        width: 90%; /* Sur mobile, elle prend 90% de la largeur */
+        width: 250px; /* Sur mobile, elle prend 90% de la largeur */
         max-width: 250px; /* Mais ne dépasse pas 250px */
     }
 

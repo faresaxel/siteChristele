@@ -318,6 +318,23 @@ footer {
 
 /* Par défaut sur mobile, affiche la description sans hover */
 @media (max-width: 768px) {
+	
+	.about-content {
+        flex-direction: column;
+        gap: 20px;
+        text-align: center;
+    }
+
+    .coach-photo {
+        width: 80%;
+        max-width: 250px;
+    }
+
+    .about-text {
+        font-size: 1.1em;
+        text-align: justify;
+    }
+	
 /* Si tu veux que l'élément prenne toute la largeur sur mobile, tu peux ajouter cette ligne */
     .service {
         width: 90%;  /* Réduit la largeur pour mobile */
@@ -356,6 +373,22 @@ footer {
 
 
 @media (max-width: 480px) {
+	
+	.about-content {
+        flex-direction: column;
+        gap: 20px;
+        text-align: center;
+    }
+
+    .coach-photo {
+        width: 80%;
+        max-width: 250px;
+    }
+
+    .about-text {
+        font-size: 1.1em;
+        text-align: justify;
+    }
 /* Si tu veux que l'élément prenne toute la largeur sur mobile, tu peux ajouter cette ligne */
     .service {
         width: 90%;  /* Réduit la largeur pour mobile */

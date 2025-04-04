@@ -321,7 +321,7 @@ footer {
 	
  .coach-photo {
         width: 80vw; /* Prend 80% de la largeur de l'écran */
-        max-width: 250px; /* Ne dépasse pas 250px */
+        /*max-width: 250px; /* Ne dépasse pas 250px */
     }
 	.about-content {
         flex-direction: column;
@@ -360,7 +360,7 @@ footer {
 	
 .coach-photo {
         width: 80vw; /* Prend 80% de la largeur de l'écran */
-        max-width: 250px; /* Ne dépasse pas 250px */
+       /* max-width: 250px; /* Ne dépasse pas 250px */
     }
 
 	.about-content {

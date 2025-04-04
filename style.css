@@ -326,15 +326,15 @@ footer {
     }
 
     .coach-photo {
-        width: 200px; /* Prend 90% de la largeur de l'écran */
-        max-width: 300px; /* Empêche qu'elle devienne trop grande */
-        height: 300px; /* Garde le bon ratio */
-    } 
+    width: 200px;
+    height: 300px;
+    border-radius: 50%; 
+    object-fit: cover; 
  
 }
 
  .about-text {
-    width: 95%;
+    width: 80%;
 }
 	
 /* Si tu veux que l'élément prenne toute la largeur sur mobile, tu peux ajouter cette ligne */
@@ -368,14 +368,16 @@ footer {
         text-align: center;
     }
 
- .coach-photo {
-        width: 200px; /* Prend 90% de la largeur de l'écran */
-        max-width: 300px; /* Empêche qu'elle devienne trop grande */
-        height: 300px; /* Garde le bon ratio */
-    } 
+  .coach-photo {
+    width: 200px;
+    height: 300px;
+    border-radius: 50%; 
+    object-fit: cover; 
+
+}
 
  .about-text {
-    width: 95%;
+    width: 80%;
 }
 /* Si tu veux que l'élément prenne toute la largeur sur mobile, tu peux ajouter cette ligne */
     .service {

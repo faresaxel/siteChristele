@@ -325,9 +325,9 @@ footer {
         text-align: center;
     }
 
-  .coach-photo {
-        width: 250px /* Sur mobile, elle prend 90% de la largeur */
-        max-width: 250px; /* Mais ne dépasse pas 250px */
+ .coach-photo {
+        width: 80vw; /* Prend 80% de la largeur de l'écran */
+        max-width: 250px; /* Ne dépasse pas 250px */
     }
 
  .about-text {
@@ -365,9 +365,9 @@ footer {
         text-align: center;
     }
 
-  .coach-photo {
-        width: 250px; /* Sur mobile, elle prend 90% de la largeur */
-        max-width: 250px; /* Mais ne dépasse pas 250px */
+.coach-photo {
+        width: 80vw; /* Prend 80% de la largeur de l'écran */
+        max-width: 250px; /* Ne dépasse pas 250px */
     }
 
  .about-text {

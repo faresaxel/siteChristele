@@ -326,12 +326,11 @@ footer {
         /*display: block; /* Évite tout comportement inline */
         margin: 0 auto; /* Centre l’image */
     }
-	   .about-content {
-        flex-direction: column; /* Empile les éléments en colonne */
-        gap: 20px; /* Réduit l’espace entre les éléments */
-        width: 100%; /* Prend toute la largeur */
-        text-align: center; /* Centre le texte et l’image */
-    }
+.about-content {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
 
  .about-text {
     width: 95%;
@@ -369,12 +368,11 @@ footer {
         /*display: block; /* Évite tout comportement inline */
         margin: 0 auto; /* Centre l’image */
     }
-	   .about-content {
-        flex-direction: column; /* Empile les éléments en colonne */
-        gap: 20px; /* Réduit l’espace entre les éléments */
-        width: 100%; /* Prend toute la largeur */
-        text-align: center; /* Centre le texte et l’image */
-    }
+	.about-content {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
 
  .about-text {
     width: 95%;

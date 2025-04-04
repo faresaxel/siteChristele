@@ -175,19 +175,19 @@
         </div>
     </section>
 
-    <!-- Section Contact -->
-    <section id="contact">
-        <div class="container">
-            <h2 style="font-family: 'Montserrat', sans-serif;">Contactez-moi</h2>
-            <p>Vous êtes prêt(e) à avancer vers vos objectifs ? Prenez contact avec moi dès aujourd'hui !</p>
-            <form action="mailto:christelehachette@gmail.com" method="get" enctype="text/plain">
-                <input type="text" name="name" placeholder="Votre nom" required>
-                <input type="email" name="email" placeholder="Votre email" required>
-                <textarea name="message" placeholder="Votre message" required></textarea>
-                <button type="submit">Envoyer</button>
-            </form>
-        </div>
-    </section>
+   <!-- Section Contact -->
+<section id="contact">
+    <div class="container">
+        <h2 style="font-family: 'Montserrat', sans-serif;">Contactez-moi</h2>
+        <p>Vous êtes prêt(e) à avancer vers vos objectifs ? Prenez contact avec moi dès aujourd'hui !</p>
+        <form id="contact-form">
+            <input type="text" id="name" name="name" placeholder="Votre nom" required>
+            <input type="email" id="email" name="email" placeholder="Votre email" required>
+            <textarea id="message" name="message" placeholder="Votre message" required></textarea>
+            <button type="submit">Envoyer</button>
+        </form>
+    </div>
+</section>
 
     <!-- Pied de page -->
 <footer style="background: linear-gradient(to right, #9c27b0, #0d47a1);; color: white; text-align: center; padding: 30px 0;">
@@ -218,6 +218,42 @@
             });
         });
     </script>
+
+<script type="text/javascript" src="https://cdn.jsdelivr.net/npm/@emailjs/browser@4/dist/email.min.js"></script>
+
+<script type="text/javascript">
+    // Initialisation d'EmailJS avec la clé publique
+    emailjs.init("0Csm4BDBK2eZjyc4x"); // Remplace par ta propre clé API publique
+
+    const form = document.getElementById('contact-form');
+    if (form) {
+        form.addEventListener('submit', function (event) {
+            event.preventDefault(); // Empêche l'envoi classique du formulaire
+
+            // Collecte des données du formulaire
+            const formData = new FormData(event.target);
+            const name = formData.get('name');
+            const email = formData.get('email');
+            const message = formData.get('message');
+
+            // Envoi de l'email via EmailJS
+            emailjs.send("service_3dynkge", "template_zgtmnx9", {
+                name: name,            // Nom de l'utilisateur
+                email: email,          // Email de l'utilisateur
+                message: message,      // Message de l'utilisateur
+                time: new Date().toLocaleTimeString(),  // Heure actuelle
+                title: "Message de Contact" // Titre du message
+            }).then(function(response) {
+                console.log('SUCCESS!', response.status, response.text);
+                alert('Message envoyé avec succès !');
+            }, function(error) {
+                console.log('FAILED...', error);
+                alert('Erreur lors de l\'envoi du message, veuillez réessayer plus tard.');
+            });
+        });
+    }
+</script>
+	
 
 </body>
 </html>

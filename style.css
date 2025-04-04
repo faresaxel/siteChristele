@@ -321,7 +321,7 @@ footer {
 /* Si tu veux que l'élément prenne toute la largeur sur mobile, tu peux ajouter cette ligne */
     .service {
         width: 90%;  /* Réduit la largeur pour mobile */
-		height: 120px; 
+		height: 130px; 
 		
     }
 	
@@ -356,29 +356,38 @@ footer {
 
 
 @media (max-width: 480px) {
-     {
-
-
-		 
-    .service-description {
-        display: block;  /* Affiche la description directement */
-        opacity: 1;      /* Assure que la description est visible */
-        height: auto;    /* S'assure que la hauteur s'adapte au contenu */
+/* Si tu veux que l'élément prenne toute la largeur sur mobile, tu peux ajouter cette ligne */
+    .service {
+        width: 90%;  /* Réduit la largeur pour mobile */
+		height: 130px; 
+		
     }
-
-    /* Supprime les effets de survol pour mobile */
+	
+	/* Description en dessous */
+.service-description {
+    display: none;
+    background-color: #f5f5f5;
+    padding: 15px;
+    margin-top: 15px;
+    border-radius: 8px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    font-size: 13px;
+    color: #555;
+    opacity: 0;
+	display: flex;
+    transition: opacity 0.3s ease;
+    margin-bottom: 10px; /* Ajout d'un espace en bas pour la description */
+}
+ /* Supprime les effets de survol pour mobile */
     .service:hover {
         transform: none;   /* Supprime l'effet de transformation */
         width: 90%; 
         height: 200px;         /* Garde la largeur pour mobile */
     }
 
-    /* Si tu veux que l'élément prenne toute la largeur sur mobile, tu peux ajouter cette ligne */
-    .service {
-        width: 90%;  /* Réduit la largeur pour mobile */
-		height:120px; 
-		
-    }
-	
+  /* Affichage de la description au survol */
+.service:hover .service-description {
+    display: block;
+    opacity: 1;
 }
 }

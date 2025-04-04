@@ -183,6 +183,7 @@
         <form id="contact-form">
             <input type="text" id="name" name="name" placeholder="Votre nom" required>
             <input type="email" id="email" name="email" placeholder="Votre email" required>
+			<input type="telephone" id="telephone" name="telephone" placeholder="Votre téléphone" required>
             <textarea id="message" name="message" placeholder="Votre message" required></textarea>
             <button type="submit">Envoyer</button>
         </form>
@@ -232,14 +233,16 @@
 
             // Collecte des données du formulaire
             const formData = new FormData(event.target);
-            const name = formData.get('name');
+            const name = formData.get('name');		
             const email = formData.get('email');
+			const telephone = formData.get('telephone');
             const message = formData.get('message');
 
             // Envoi de l'email via EmailJS
             emailjs.send("service_3dynkge", "template_zgtmnx9", {
                 name: name,            // Nom de l'utilisateur
                 email: email,          // Email de l'utilisateur
+				telephone: telephone,          // Téléphone de l'utilisateur
                 message: message,      // Message de l'utilisateur
                 time: new Date().toLocaleTimeString(),  // Heure actuelle
                 title: "Message de Contact" // Titre du message

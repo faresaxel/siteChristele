@@ -59,7 +59,7 @@ h4 {
 }
 
 .coach-photo {
-    width: 700px;
+    width: 400px;
     height: 700px;
     border-radius: 50%; 
     object-fit: cover; 
@@ -326,11 +326,12 @@ footer {
         /*display: block; /* Évite tout comportement inline */
         margin: 0 auto; /* Centre l’image */
     }
-.about-content {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-}
+	   .about-content {
+        flex-direction: column; /* Empile les éléments en colonne */
+        gap: 20px; /* Réduit l’espace entre les éléments */
+        width: 100%; /* Prend toute la largeur */
+        text-align: center; /* Centre le texte et l’image */
+    }
 
  .about-text {
     width: 95%;
@@ -368,11 +369,12 @@ footer {
         /*display: block; /* Évite tout comportement inline */
         margin: 0 auto; /* Centre l’image */
     }
-	.about-content {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-}
+	   .about-content {
+        flex-direction: column; /* Empile les éléments en colonne */
+        gap: 20px; /* Réduit l’espace entre les éléments */
+        width: 100%; /* Prend toute la largeur */
+        text-align: center; /* Centre le texte et l’image */
+    }
 
  .about-text {
     width: 95%;

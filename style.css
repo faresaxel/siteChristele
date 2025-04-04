@@ -320,7 +320,7 @@ footer {
 @media (max-width: 768px) {
 	
 .coach-photo {
-        width: 90vw; /* L’image prend 90% de la largeur de l’écran */
+        width: 300px /* L’image prend 90% de la largeur de l’écran */
         max-width: 300px; /* Elle ne dépassera jamais 300px */
         height: auto; /* Hauteur ajustée automatiquement pour garder les proportions */
         display: block; /* Évite tout comportement inline */
@@ -362,7 +362,7 @@ footer {
 @media (max-width: 480px) {
 	
 .coach-photo {
-        width: 90vw; /* L’image prend 90% de la largeur de l’écran */
+        width: 300px; /* L’image prend 90% de la largeur de l’écran */
         max-width: 300px; /* Elle ne dépassera jamais 300px */
         height: auto; /* Hauteur ajustée automatiquement pour garder les proportions */
         display: block; /* Évite tout comportement inline */

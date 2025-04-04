@@ -321,7 +321,7 @@ footer {
 /* Si tu veux que l'élément prenne toute la largeur sur mobile, tu peux ajouter cette ligne */
     .service {
         width: 90%;  /* Réduit la largeur pour mobile */
-		height: 65px; 
+		height: 150px; 
 		
     }
  /* Supprime les effets de survol pour mobile */

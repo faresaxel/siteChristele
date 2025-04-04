@@ -326,10 +326,10 @@ footer {
     }
 
     .coach-photo {
-    width: 300px;
-    height: 300px;
-    border-radius: 50%; 
-    object-fit: cover; 
+        width: 90%; /* Prend 90% de la largeur de l'écran */
+        max-width: 300px; /* Empêche qu'elle devienne trop grande */
+        height: auto; /* Garde le bon ratio */
+    } 
  
 }
 
@@ -368,13 +368,11 @@ footer {
         text-align: center;
     }
 
-  .coach-photo {
-    width: 300px;
-    height: 300px;
-    border-radius: 50%; 
-    object-fit: cover; 
-
-}
+.coach-photo {
+        width: 90%; /* Prend 90% de la largeur de l'écran */
+        max-width: 300px; /* Empêche qu'elle devienne trop grande */
+        height: auto; /* Garde le bon ratio */
+    }
 
  .about-text {
     width: 95%;

@@ -175,7 +175,7 @@
         </div>
     </section>
 
-   <!-- Section Contact -->
+<!-- Section Contact -->
 <section id="contact">
     <div class="container">
         <h2 style="font-family: 'Montserrat', sans-serif;">Contactez-moi</h2>
@@ -183,12 +183,14 @@
         <form id="contact-form">
             <input type="text" id="name" name="name" placeholder="Votre nom" required>
             <input type="email" id="email" name="email" placeholder="Votre email" required>
-			<input type="telephone" id="telephone" name="telephone" placeholder="Votre téléphone" required>
+            <input type="telephone" id="telephone" name="telephone" placeholder="Votre téléphone" required>
+            <!-- Champ Message agrandi -->
             <textarea id="message" name="message" placeholder="Votre message" required></textarea>
             <button type="submit">Envoyer</button>
         </form>
     </div>
 </section>
+
 
     <!-- Pied de page -->
 <footer style="background: linear-gradient(to right, #9c27b0, #0d47a1);; color: white; text-align: center; padding: 30px 0;">
@@ -220,6 +222,7 @@
         });
     </script>
 
+<!-- Inclure EmailJS -->
 <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/@emailjs/browser@4/dist/email.min.js"></script>
 
 <script type="text/javascript">
@@ -235,20 +238,37 @@
             const formData = new FormData(event.target);
             const name = formData.get('name');		
             const email = formData.get('email');
-			const telephone = formData.get('telephone');
+            const telephone = formData.get('telephone');
             const message = formData.get('message');
+
+            // Validation de l'email
+            const emailRegex = /^[a-zA-Z0-9._-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,6}$/;
+            if (!emailRegex.test(email)) {
+                alert('L\'email est invalide. Veuillez entrer un email correct.');
+                return; // Empêche l'envoi si l'email est invalide
+            }
+
+            // Validation du téléphone international avec + ou 00
+            const phoneRegex = /^(\+|00)([1-9]{1,4})\s?(\d{1,4}[\s.-]?)?(\d{1,4}[\s.-]?)\d{4}$/;
+            if (!phoneRegex.test(telephone)) {
+                alert('Le numéro de téléphone est invalide. Veuillez entrer un numéro valide (format international, avec + ou 00).');
+                return; // Empêche l'envoi si le téléphone est invalide
+            }
 
             // Envoi de l'email via EmailJS
             emailjs.send("service_3dynkge", "template_zgtmnx9", {
                 name: name,            // Nom de l'utilisateur
                 email: email,          // Email de l'utilisateur
-				telephone: telephone,          // Téléphone de l'utilisateur
+                telephone: telephone,  // Téléphone de l'utilisateur
                 message: message,      // Message de l'utilisateur
                 time: new Date().toLocaleTimeString(),  // Heure actuelle
                 title: "Message de Contact" // Titre du message
             }).then(function(response) {
                 console.log('SUCCESS!', response.status, response.text);
                 alert('Message envoyé avec succès !');
+
+                // Réinitialisation du formulaire après envoi réussi
+                form.reset(); // Réinitialise tous les champs du formulaire
             }, function(error) {
                 console.log('FAILED...', error);
                 alert('Erreur lors de l\'envoi du message, veuillez réessayer plus tard.');
@@ -256,6 +276,7 @@
         });
     }
 </script>
+
 	
 
 </body>

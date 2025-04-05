@@ -316,6 +316,20 @@ footer {
     transition: opacity 0.5s ease-in-out, transform 0.5s ease-in-out;
 }
 
+
+#contact-form textarea {
+    width: 100%;               /* Prend toute la largeur disponible */
+    height: 150px;             /* Augmente la hauteur pour rendre le champ plus grand */
+    padding: 10px;             /* Espacement interne pour le confort de saisie */
+    font-size: 14px;           /* Taille du texte à l'intérieur */
+    border: 1px solid #ccc;   /* Bordure fine et discrète */
+    border-radius: 5px;       /* Bords arrondis pour un design plus agréable */
+    resize: vertical;         /* Permet à l'utilisateur de redimensionner le champ en hauteur uniquement */
+}
+
+
+
+
 /* Par défaut sur mobile, affiche la description sans hover */
 @media (max-width: 768px) {
 	

@@ -350,13 +350,18 @@ footer {
     justify-content: space-between;
     overflow: hidden;
     transition: transform 0.3s ease, box-shadow 0.3s ease;
-    max-width: 800px; /* Limite la largeur de la bulle */
+	 max-width: 1000px; /*largeur de la bulle */
+    max-width: 1000px; /* Limite la largeur de la bulle */
     margin: 0 auto; /* Centre chaque bulle */
 }
 
 /* Si vous voulez également un espacement entre chaque bulle sur la largeur, ajoutez une marge entre elles */
 #tarifs-page .tarif-section:not(:first-child) {
-    margin-top: 30px; /* Espace entre les sections (bulles) */
+    margin-top: 30px; /* Espace entre les sections */
+}
+
+#tarifs-page .tarif-section:last-child {
+    margin-bottom: 30px; /* Espace en bas de la dernière section */
 }
 
 
@@ -449,13 +454,14 @@ footer {
 
 /* Par défaut sur mobile, affiche la description sans hover */
 @media (max-width: 768px) {
-	
-.coach-photo {
-        width: 300px; /* L’image prend 90% de la largeur de l’écran */
-        max-width: 300px; /* Elle ne dépassera jamais 300px */
-        height: 300px; /* Hauteur ajustée automatiquement pour garder les proportions */
-        display: block; /* Évite tout comportement inline */
-        margin: 0 auto; /* Centre l’image */
+
+
+ .coach-photo {
+    width: 80%;
+    max-width: 300px;
+    margin: 0 auto;
+    border-radius: 20px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
     }
 	   .about-content {
         flex-direction: column; /* Empile les éléments en colonne */
@@ -558,11 +564,11 @@ footer {
 @media (max-width: 480px) {
 	
 .coach-photo {
-        width: 300px; /* L’image prend 90% de la largeur de l’écran */
-        max-width: 300px; /* Elle ne dépassera jamais 300px */
-        height: 300px; /* Hauteur ajustée automatiquement pour garder les proportions */
-        display: block; /* Évite tout comportement inline */
-        margin: 0 auto; /* Centre l’image */
+    width: 80%;
+    max-width: 300px;
+    margin: 0 auto;
+    border-radius: 20px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
     }
 	   .about-content {
         flex-direction: column; /* Empile les éléments en colonne */

@@ -456,7 +456,7 @@ footer {
 @media (max-width: 768px) {
 
 
- .coach-photo {
+ #about .coach-photo {
     width: 80%;
     max-width: 300px;
     margin: 0 auto;
@@ -563,7 +563,7 @@ footer {
 
 @media (max-width: 480px) {
 	
-.coach-photo {
+#about .coach-photo{
     width: 80%;
     max-width: 300px;
     margin: 0 auto;

@@ -58,6 +58,7 @@ h4 {
     align-items: center;
 }
 
+
 .coach-photo {
     width: 300px;
     height: 600px;
@@ -372,6 +373,137 @@ footer {
     opacity: 1;
 }
 }
+
+
+/* Styles spécifiques à la page des tarifs de coaching et médiumnité */
+/* Styles pour chaque section tarifaire */
+#tarifs-page .tarif-section {
+    background-color: #fff;
+    border-radius: 10px;
+    padding: 30px; /* Espace à l'intérieur de la bulle, autour du texte et de l'image */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    margin-bottom: 30px; /* Espace entre chaque bulle */
+    height: auto; /* Ajuste automatiquement la hauteur */
+    min-height: 300px; /* Hauteur minimale */
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    overflow: hidden;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+	width: 1000px; /* Limite la largeur de la bulle */
+    max-width: 1000px; /* Limite la largeur de la bulle */
+    margin: 0 auto; /* Centre chaque bulle */
+}
+
+/* Ajout de padding à l'image dans la bulle */
+#tarifs-page .tarif-section img {
+    margin-bottom: 20px; /* Espacement entre l'image et le texte */
+    border-radius: 8px; /* Bord arrondi pour l'image */
+    padding: 10px; /* Padding interne autour de l'image */
+    max-width: 100%; /* Limite la taille de l'image pour qu'elle ne déborde pas */
+    height: auto; /* Garder les proportions de l'image */
+}
+
+/* Styles pour le texte à l'intérieur de chaque bulle */
+#tarifs-page .tarif-section .tarif-text {
+    padding: 20px; /* Espace autour du texte */
+    color: #555;
+    font-family: 'Lora', serif;
+    line-height: 1.7;
+    text-align: justify;
+}
+
+/* Si vous voulez également un espacement entre chaque bulle sur la largeur, ajoutez une marge entre elles */
+#tarifs-page .tarif-section:not(:first-child) {
+    margin-top: 30px; /* Espace entre les sections (bulles) */
+}
+
+/* Au survol, on agrandit la "bulle" */
+#tarifs-page .tarif-section:hover {
+    transform: scale(1.05); /* Agrandir la bulle */
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.2); /* Ombre plus marquée */
+}
+
+/* Titre du tarif */
+#tarifs-page .tarif-header {
+    font-family: 'Lora', sans-serif;
+    text-align: center;
+    font-size: 2.5em;
+    color: #3f51b5;
+    margin-bottom: 40px;
+}
+
+/* Titre du service dans la bulle */
+#tarifs-page .tarif-service h3 {
+    font-family: 'Montserrat', sans-serif;
+    font-size: 2em;
+    color: #333;
+    margin-bottom: 15px;
+}
+
+/* Texte descriptif dans chaque bulle */
+#tarifs-page .tarif-text {
+    flex: 1;
+    font-family: 'Lora', serif;
+    color: #555;
+    line-height: 1.7;
+    text-align: justify;
+}
+
+/* Style des prix */
+#tarifs-page .tarif-service .pricing {
+    font-size: 1.5em;
+    font-weight: bold;
+    color: #3f51b5;
+    margin-top: 20px;
+}
+
+/* Effet de liste à puces */
+#tarifs-page .tarif-service ul {
+    font-size: 1.15em;
+    margin-left: 30px;
+    list-style-type: disc;
+    line-height: 1.6;
+}
+
+/* Effet général sur les sections avec tarification */
+#tarifs-page .tarif-content {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 40px;
+}
+
+#tarifs-page .tarif-photo {
+    width: 30%;
+    border-radius: 30px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+#tarifs-page .tarif-section {
+    background-color: #f4f7f6;
+    padding: 60px 0;
+}
+
+#tarifs-page .tarif-text {
+    font-family: 'Lora', serif;
+    color: #555;
+    line-height: 1.7;
+    text-align: justify;
+}
+
+/* Apparence au survol des services */
+#tarifs-page .tarif-service {
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+/* Agrandissement de la bulle lors du survol */
+#tarifs-page .tarif-service:hover {
+    transform: scale(1.05);
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+}
+
+
 
 
 @media (max-width: 480px) {

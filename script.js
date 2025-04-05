@@ -1,24 +1,5 @@
 <!-- Sélectionne toutes les bulles -->
 <script>
-    document.addEventListener("DOMContentLoaded", function () {
-        const items = document.querySelectorAll('.menu-item');
-
-        items.forEach(item => {
-            item.addEventListener('mouseenter', () => {
-                // Réinitialise toutes les bulles à la taille de base
-                items.forEach(innerItem => {
-                    innerItem.style.height = '100px';
-                });
-                // Agrandit la bulle survolée
-                item.style.height = '150px';
-            });
-
-            item.addEventListener('mouseleave', () => {
-                // Réinitialise uniquement la bulle quittée
-                item.style.height = '100px';
-            });
-        });
-
         // ✅ Initialisation EmailJS (Remplace "0Csm4BDBK2eZjyc4x" par ton ID réel)
         emailjs.init("0Csm4BDBK2eZjyc4x");
 

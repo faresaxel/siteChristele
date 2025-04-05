@@ -328,6 +328,122 @@ footer {
     resize: vertical;         /* Permet à l'utilisateur de redimensionner le champ en hauteur uniquement */
 }
 
+/* Ajouter de l'espace entre l'en-tête et la première bulle ainsi qu'entre les bulles */
+#tarifs-page {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 20px; /* Ajout d'une marge à droite et à gauche */
+    margin-top: 60px; /* Espace entre l'en-tête et les sections */
+}
+
+/* Styles pour chaque section tarifaire */
+#tarifs-page .tarif-section {
+    background-color: #fff;
+    border-radius: 10px;
+    padding: 30px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    margin-bottom: 30px; /* Espace entre chaque bulle */
+    height: auto; /* Ajuste automatiquement la hauteur */
+    min-height: 300px; /* Hauteur minimale */
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    overflow: hidden;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    max-width: 800px; /* Limite la largeur de la bulle */
+    margin: 0 auto; /* Centre chaque bulle */
+}
+
+/* Si vous voulez également un espacement entre chaque bulle sur la largeur, ajoutez une marge entre elles */
+#tarifs-page .tarif-section:not(:first-child) {
+    margin-top: 30px; /* Espace entre les sections (bulles) */
+}
+
+
+/* Au survol, on agrandit la "bulle" */
+#tarifs-page .tarif-section:hover {
+    transform: scale(1.05); /* Agrandir la bulle */
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.2); /* Ombre plus marquée */
+}
+
+/* Titre du tarif */
+#tarifs-page .tarif-header {
+    font-family: 'Lora', sans-serif;
+    text-align: center;
+    font-size: 2.5em;
+    color: #3f51b5;
+    margin-bottom: 40px;
+}
+
+/* Titre du service dans la bulle */
+#tarifs-page .tarif-service h3 {
+    font-family: 'Montserrat', sans-serif;
+    font-size: 2em;
+    color: #333;
+    margin-bottom: 15px;
+}
+
+/* Texte descriptif dans chaque bulle */
+#tarifs-page .tarif-text {
+    flex: 1;
+    font-family: 'Lora', serif;
+    color: #555;
+    line-height: 1.7;
+    text-align: justify;
+}
+
+/* Style des prix */
+#tarifs-page .tarif-service .pricing {
+    font-size: 1.5em;
+    font-weight: bold;
+    color: #3f51b5;
+    margin-top: 20px;
+}
+
+/* Effet de liste à puces */
+#tarifs-page .tarif-service ul {
+    font-size: 1.15em;
+    margin-left: 30px;
+    list-style-type: disc;
+    line-height: 1.6;
+}
+
+/* Effet général sur les sections avec tarification */
+#tarifs-page .tarif-content {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 40px;
+}
+
+#tarifs-page .tarif-photo {
+    width: 30%;
+    border-radius: 30px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+#tarifs-page .tarif-section {
+    background-color: #f4f7f6;
+    padding: 60px 0;
+}
+
+#tarifs-page .tarif-text {
+    font-family: 'Lora', serif;
+    color: #555;
+    line-height: 1.7;
+    text-align: justify;
+}
+
+/* Apparence au survol des services */
+#tarifs-page .tarif-service {
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+/* Agrandissement de la bulle lors du survol */
+#tarifs-page .tarif-service:hover {
+    transform: scale(1.05);
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+}
 
 
 
@@ -372,6 +488,68 @@ footer {
     display: block;
     opacity: 1;
 }
+
+/* Espacement entre les bulles */
+#tarifs-page .tarif-section:not(:first-child) {
+    margin-top: 20px; /* Réduit l'espace pour une meilleure lisibilité sur mobile */
+}
+
+/* Suppression de l'agrandissement au survol sur mobile pour éviter les comportements indésirables */
+@media (hover: hover) {
+    #tarifs-page .tarif-section:hover {
+        transform: scale(1.05);
+        box-shadow: 0 6px 12px rgba(0, 0, 0, 0.2);
+    }
+}
+
+/* Ajustement du titre */
+#tarifs-page .tarif-header {
+    font-size: 1.8em;
+    margin-bottom: 20px;
+}
+
+/* Ajustement des services dans les bulles */
+#tarifs-page .tarif-service h3 {
+    font-size: 1.5em;
+    margin-bottom: 10px;
+}
+
+#tarifs-page .tarif-text {
+    font-size: 1em;
+    line-height: 1.5;
+}
+
+#tarifs-page .tarif-service .pricing {
+    font-size: 1.3em;
+    margin-top: 15px;
+}
+
+#tarifs-page .tarif-service ul {
+    font-size: 1em;
+    margin-left: 20px;
+    line-height: 1.4;
+}
+
+/* Adaptation de la mise en page pour mobile */
+#tarifs-page .tarif-content {
+    flex-direction: column;
+    gap: 20px;
+    text-align: center;
+}
+
+#tarifs-page .tarif-photo {
+    width: 80%;
+    max-width: 300px;
+    margin: 0 auto;
+    border-radius: 20px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+#tarifs-page .tarif-section {
+    padding: 40px 15px;
+}
+
+
 }
 
 
@@ -416,4 +594,66 @@ footer {
     display: block;
     opacity: 1;
 }
+
+/* Espacement entre les bulles */
+#tarifs-page .tarif-section:not(:first-child) {
+    margin-top: 20px; /* Réduit l'espace pour une meilleure lisibilité sur mobile */
+}
+
+/* Suppression de l'agrandissement au survol sur mobile pour éviter les comportements indésirables */
+@media (hover: hover) {
+    #tarifs-page .tarif-section:hover {
+        transform: scale(1.05);
+        box-shadow: 0 6px 12px rgba(0, 0, 0, 0.2);
+    }
+}
+
+/* Ajustement du titre */
+#tarifs-page .tarif-header {
+    font-size: 1.8em;
+    margin-bottom: 20px;
+}
+
+/* Ajustement des services dans les bulles */
+#tarifs-page .tarif-service h3 {
+    font-size: 1.5em;
+    margin-bottom: 10px;
+}
+
+#tarifs-page .tarif-text {
+    font-size: 1em;
+    line-height: 1.5;
+}
+
+#tarifs-page .tarif-service .pricing {
+    font-size: 1.3em;
+    margin-top: 15px;
+}
+
+#tarifs-page .tarif-service ul {
+    font-size: 1em;
+    margin-left: 20px;
+    line-height: 1.4;
+}
+
+/* Adaptation de la mise en page pour mobile */
+#tarifs-page .tarif-content {
+    flex-direction: column;
+    gap: 20px;
+    text-align: center;
+}
+
+#tarifs-page .tarif-photo {
+    width: 80%;
+    max-width: 300px;
+    margin: 0 auto;
+    border-radius: 20px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+#tarifs-page .tarif-section {
+    padding: 40px 15px;
+}
+
+
 }

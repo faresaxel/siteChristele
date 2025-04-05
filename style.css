@@ -364,7 +364,7 @@ footer {
     .service:hover {
         transform: none;   /* Supprime l'effet de transformation */
         width: 90%; 
-        height: 250px;         /* Garde la largeur pour mobile */
+        height: 300px;         /* Garde la largeur pour mobile */
     }
 
   /* Affichage de la description au survol */
@@ -408,7 +408,7 @@ footer {
     .service:hover {
         transform: none;   /* Supprime l'effet de transformation */
         width: 90%; 
-        height: 250px;         /* Garde la largeur pour mobile */
+        height: 300px;         /* Garde la largeur pour mobile */
     }
 
   /* Affichage de la description au survol */

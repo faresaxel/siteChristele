@@ -328,53 +328,6 @@ footer {
     resize: vertical;         /* Permet à l'utilisateur de redimensionner le champ en hauteur uniquement */
 }
 
-
-
-
-/* Par défaut sur mobile, affiche la description sans hover */
-@media (max-width: 768px) {
-	
-.coach-photo {
-        width: 300px; /* L’image prend 90% de la largeur de l’écran */
-        max-width: 300px; /* Elle ne dépassera jamais 300px */
-        height: 300px; /* Hauteur ajustée automatiquement pour garder les proportions */
-        display: block; /* Évite tout comportement inline */
-        margin: 0 auto; /* Centre l’image */
-    }
-	   .about-content {
-        flex-direction: column; /* Empile les éléments en colonne */
-        gap: 20px; /* Réduit l’espace entre les éléments */
-        width: 100%; /* Prend toute la largeur */
-        text-align: center; /* Centre le texte et l’image */
-    }
-
- .about-text {
-    width: 95%;
-}
-	
-/* Si tu veux que l'élément prenne toute la largeur sur mobile, tu peux ajouter cette ligne */
-    .service {
-        width: 90%;  /* Réduit la largeur pour mobile */
-		height: 130px; 
-		
-    }
-	
-
- /* Supprime les effets de survol pour mobile */
-    .service:hover {
-        transform: none;   /* Supprime l'effet de transformation */
-        width: 90%; 
-        height: 200px;         /* Garde la largeur pour mobile */
-    }
-
-  /* Affichage de la description au survol */
-.service:hover .service-description {
-    display: block;
-    opacity: 1;
-}
-}
-
-
 /* Styles spécifiques à la page des tarifs de coaching et médiumnité */
 /* Styles pour chaque section tarifaire */
 #tarifs-page .tarif-section {
@@ -504,6 +457,140 @@ footer {
 }
 
 
+/* Par défaut sur mobile, affiche la description sans hover */
+@media (max-width: 768px) {
+	
+.coach-photo {
+        width: 300px; /* L’image prend 90% de la largeur de l’écran */
+        max-width: 300px; /* Elle ne dépassera jamais 300px */
+        height: 300px; /* Hauteur ajustée automatiquement pour garder les proportions */
+        display: block; /* Évite tout comportement inline */
+        margin: 0 auto; /* Centre l’image */
+    }
+	   .about-content {
+        flex-direction: column; /* Empile les éléments en colonne */
+        gap: 20px; /* Réduit l’espace entre les éléments */
+        width: 100%; /* Prend toute la largeur */
+        text-align: center; /* Centre le texte et l’image */
+    }
+
+ .about-text {
+    width: 95%;
+}
+	
+/* Si tu veux que l'élément prenne toute la largeur sur mobile, tu peux ajouter cette ligne */
+    .service {
+        width: 90%;  /* Réduit la largeur pour mobile */
+		height: 130px; 
+		
+    }
+	
+
+ /* Supprime les effets de survol pour mobile */
+    .service:hover {
+        transform: none;   /* Supprime l'effet de transformation */
+        width: 90%; 
+        height: 200px;         /* Garde la largeur pour mobile */
+    }
+
+  /* Affichage de la description au survol */
+.service:hover .service-description {
+    display: block;
+    opacity: 1;
+}
+
+/* Styles globaux pour la page */
+#tarifs-page .tarif-section {
+    background-color: #fff;
+    border-radius: 10px;
+    padding: 30px; /* Espace à l'intérieur de la bulle */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    margin-bottom: 30px; /* Espace entre chaque bulle */
+    height: auto;
+    min-height: 300px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    overflow: hidden;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    max-width: 800px; /* Limite la largeur de la bulle */
+    margin: 0 auto; /* Centre chaque bulle */
+}
+
+/* Ajouter un espacement pour l'image */
+#tarifs-page .tarif-section img {
+    margin-bottom: 20px;
+    border-radius: 8px;
+    padding: 10px;
+    max-width: 100%; /* L'image s'ajuste à la taille de la bulle */
+    height: auto;
+}
+
+/* Style du texte à l'intérieur des bulles */
+#tarifs-page .tarif-section .tarif-text {
+    padding: 20px;
+    color: #555;
+    font-family: 'Lora', serif;
+    line-height: 1.7;
+    text-align: justify;
+}
+
+/* Espacement entre les sections tarifaires */
+#tarifs-page .tarif-section:not(:first-child) {
+    margin-top: 30px; /* Marge entre les sections */
+}
+
+/* Responsive - Adaptation pour les petits écrans */
+@media (max-width: 768px) {
+    /* Réduction de la largeur des bulles */
+    #tarifs-page .tarif-section {
+        width: 100%;
+        padding: 20px; /* Moins de padding sur mobile */
+    }
+
+    /* Réduction de l'image pour mieux s'adapter à l'écran */
+    #tarifs-page .tarif-section img {
+        max-width: 90%;
+        margin-bottom: 15px; /* Un peu moins d'espace sous l'image */
+    }
+
+    /* Ajustement du texte à l'intérieur des bulles */
+    #tarifs-page .tarif-section .tarif-text {
+        padding: 15px; /* Réduction du padding pour plus de place */
+        font-size: 1em; /* Réduire légèrement la taille de la police */
+    }
+
+    /* Espacement entre les bulles */
+    #tarifs-page .tarif-section:not(:first-child) {
+        margin-top: 20px; /* Réduire l'espace entre les bulles */
+    }
+}
+
+/* Responsive - Adaptation pour les très petits écrans (smartphones très compacts) */
+@media (max-width: 480px) {
+    /* Moins de padding et texte plus petit */
+    #tarifs-page .tarif-section {
+        padding: 15px;
+    }
+
+    #tarifs-page .tarif-section img {
+        max-width: 80%; /* Image encore plus petite */
+    }
+
+    #tarifs-page .tarif-section .tarif-text {
+        font-size: 0.9em; /* Réduire un peu la taille du texte pour l'adapter */
+        padding: 10px; /* Encore moins de padding */
+    }
+
+    /* Ajustement de la hauteur minimale de la bulle */
+    #tarifs-page .tarif-section {
+        min-height: 250px; /* Hauteur plus petite sur mobile */
+    }
+}
+
+
+}
+
 
 
 @media (max-width: 480px) {
@@ -545,4 +632,94 @@ footer {
     display: block;
     opacity: 1;
 }
+
+/* Styles globaux pour la page */
+#tarifs-page .tarif-section {
+    background-color: #fff;
+    border-radius: 10px;
+    padding: 30px; /* Espace à l'intérieur de la bulle */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    margin-bottom: 30px; /* Espace entre chaque bulle */
+    height: auto;
+    min-height: 300px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    overflow: hidden;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    max-width: 800px; /* Limite la largeur de la bulle */
+    margin: 0 auto; /* Centre chaque bulle */
+}
+
+/* Ajouter un espacement pour l'image */
+#tarifs-page .tarif-section img {
+    margin-bottom: 20px;
+    border-radius: 8px;
+    padding: 10px;
+    max-width: 100%; /* L'image s'ajuste à la taille de la bulle */
+    height: auto;
+}
+
+/* Style du texte à l'intérieur des bulles */
+#tarifs-page .tarif-section .tarif-text {
+    padding: 20px;
+    color: #555;
+    font-family: 'Lora', serif;
+    line-height: 1.7;
+    text-align: justify;
+}
+
+/* Espacement entre les sections tarifaires */
+#tarifs-page .tarif-section:not(:first-child) {
+    margin-top: 30px; /* Marge entre les sections */
+}
+
+/* Responsive - Adaptation pour les petits écrans */
+@media (max-width: 768px) {
+    /* Réduction de la largeur des bulles */
+    #tarifs-page .tarif-section {
+        width: 100%;
+        padding: 20px; /* Moins de padding sur mobile */
+    }
+
+    /* Réduction de l'image pour mieux s'adapter à l'écran */
+    #tarifs-page .tarif-section img {
+        max-width: 90%;
+        margin-bottom: 15px; /* Un peu moins d'espace sous l'image */
+    }
+
+    /* Ajustement du texte à l'intérieur des bulles */
+    #tarifs-page .tarif-section .tarif-text {
+        padding: 15px; /* Réduction du padding pour plus de place */
+        font-size: 1em; /* Réduire légèrement la taille de la police */
+    }
+
+    /* Espacement entre les bulles */
+    #tarifs-page .tarif-section:not(:first-child) {
+        margin-top: 20px; /* Réduire l'espace entre les bulles */
+    }
+}
+
+/* Responsive - Adaptation pour les très petits écrans (smartphones très compacts) */
+@media (max-width: 480px) {
+    /* Moins de padding et texte plus petit */
+    #tarifs-page .tarif-section {
+        padding: 15px;
+    }
+
+    #tarifs-page .tarif-section img {
+        max-width: 80%; /* Image encore plus petite */
+    }
+
+    #tarifs-page .tarif-section .tarif-text {
+        font-size: 0.9em; /* Réduire un peu la taille du texte pour l'adapter */
+        padding: 10px; /* Encore moins de padding */
+    }
+
+    /* Ajustement de la hauteur minimale de la bulle */
+    #tarifs-page .tarif-section {
+        min-height: 250px; /* Hauteur plus petite sur mobile */
+    }
+}
+
 }

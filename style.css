@@ -459,6 +459,7 @@ footer {
 
  #about .coach-photo {
     width: 80%;
+	height: auto;
     max-width: 300px;
     margin: 0 auto;
     border-radius: 20px;
@@ -546,6 +547,7 @@ footer {
 
 #tarifs-page .tarif-photo {
     width: 80%;
+	height: auto;
     max-width: 300px;
     margin: 0 auto;
     border-radius: 20px;

@@ -364,7 +364,7 @@ footer {
     .service:hover {
         transform: none;   /* Supprime l'effet de transformation */
         width: 90%; 
-        height: 230px;         /* Garde la largeur pour mobile */
+        height: 250px;         /* Garde la largeur pour mobile */
     }
 
   /* Affichage de la description au survol */
@@ -399,7 +399,7 @@ footer {
 /* Si tu veux que l'élément prenne toute la largeur sur mobile, tu peux ajouter cette ligne */
     .service {
         width: 90%;  /* Réduit la largeur pour mobile */
-		height: 140px; 
+		height: 130px; 
 		
     }
 	
@@ -408,7 +408,7 @@ footer {
     .service:hover {
         transform: none;   /* Supprime l'effet de transformation */
         width: 90%; 
-        height: 230px;         /* Garde la largeur pour mobile */
+        height: 250px;         /* Garde la largeur pour mobile */
     }
 
   /* Affichage de la description au survol */

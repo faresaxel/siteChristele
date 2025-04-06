@@ -500,7 +500,7 @@ footer {
 /* Titre */
 .header-title {
     font-family: 'Arial', sans-serif;
-    font-size: 1.8em;
+    font-size: 1.6em;
     margin-bottom: 15px;
     text-shadow: 2px 2px 6px rgba(0, 0, 0, 0.2);
     position: relative;
@@ -508,6 +508,22 @@ footer {
     opacity: 0;
     transform: translateY(50px);
     animation: fadeInUp 1s forwards;
+}
+
+/* Sous-titre */
+.header-subtitle {
+    font-family: 'Helvetica', sans-serif;
+    font-size: 0.9em;
+    line-height: 1.5;
+    margin: 0 auto;
+    width: 80%;
+    text-shadow: 1px 1px 4px rgba(0, 0, 0, 0.2);
+    position: relative;
+    z-index: 2;
+    opacity: 0;
+    transform: translateY(50px);
+    animation: fadeInUp 1.2s forwards;
+    animation-delay: 0.2s;
 }
 .phone-number {
     margin-top: 15px;
@@ -627,7 +643,7 @@ footer {
 /* Titre */
 .header-title {
     font-family: 'Arial', sans-serif;
-    font-size: 1.8em;
+    font-size: 1.6em;
     margin-bottom: 15px;
     text-shadow: 2px 2px 6px rgba(0, 0, 0, 0.2);
     position: relative;
@@ -635,7 +651,23 @@ footer {
     opacity: 0;
     transform: translateY(50px);
     animation: fadeInUp 1s forwards;
-}	
+}
+
+/* Sous-titre */
+.header-subtitle {
+    font-family: 'Helvetica', sans-serif;
+    font-size: 0.9em;
+    line-height: 1.5;
+    margin: 0 auto;
+    width: 80%;
+    text-shadow: 1px 1px 4px rgba(0, 0, 0, 0.2);
+    position: relative;
+    z-index: 2;
+    opacity: 0;
+    transform: translateY(50px);
+    animation: fadeInUp 1.2s forwards;
+    animation-delay: 0.2s;
+}
 .phone-number {
     margin-top: 15px;
     text-align: center;

@@ -455,7 +455,12 @@ footer {
 
 /* Par défaut sur mobile, affiche la description sans hover */
 @media (max-width: 768px) {
-
+.phone-number {
+    margin-top: 15px;
+    text-align: center;
+    font-size: 10px;
+    font-weight: bold;
+}
 
  #about .coach-photo {
     width: 80%;
@@ -564,6 +569,13 @@ footer {
 
 
 @media (max-width: 480px) {
+	
+.phone-number {
+    margin-top: 15px;
+    text-align: center;
+    font-size: 10px;
+    font-weight: bold;
+}
 	
 #about .coach-photo{
     width: 80%;

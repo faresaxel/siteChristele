@@ -551,7 +551,7 @@ footer {
     font-weight: bold;
 }
 .coach-photo-pages {
-    width: 50%;
+    width: 80%;
 	height: 350px;
     max-width: 300px;
     object-fit: cover;
@@ -704,7 +704,7 @@ footer {
 }
 
 coach-photo-pages {
-    width: 50%;
+    width: 80%;
 	height: 350px;
     max-width: 300px;
     object-fit: cover;

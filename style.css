@@ -333,7 +333,7 @@ footer {
 #tarifs-page {
     max-width: 1200px;
     margin: 0 auto;
-    padding: 0 20px; /* Ajout d'une marge à droite et à gauche */
+    padding: 0 50px; /* Ajout d'une marge à droite et à gauche */
     margin-top: 60px; /* Espace entre l'en-tête et les sections */
 }
 
@@ -351,7 +351,7 @@ footer {
     justify-content: space-between;
     overflow: hidden;
     transition: transform 0.3s ease, box-shadow 0.3s ease;
-	 max-width: 1000px; /*largeur de la bulle */
+	max-width: 1000px; /*largeur de la bulle */
     max-width: 1000px; /* Limite la largeur de la bulle */
     margin: 0 auto; /* Centre chaque bulle */
 }
@@ -547,7 +547,6 @@ footer {
 
 #tarifs-page .tarif-photo {
     width: 80%;
-	height: auto;
     max-width: 300px;
     margin: 0 auto;
     border-radius: 20px;
@@ -666,3 +665,55 @@ footer {
 
 
 }
+
+
+..social-icons {
+    margin-top: 15px;
+    text-align: center;
+}
+
+.social-icons a {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    font-size: 24px;
+    margin: 0 10px;
+    text-decoration: none;
+    color: white;
+    transition: background-color 0.3s ease, transform 0.3s ease;
+}
+
+/* Couleurs officielles de base */
+.social-icons .facebook {
+    background-color: #1877F2;
+}
+
+.social-icons .instagram {
+    background: linear-gradient(45deg, #f9ce34, #ee2a7b, #6228d7);
+}
+
+.social-icons .youtube {
+    background-color: #FF0000;
+}
+
+/* Effet au survol */
+.social-icons .facebook:hover {
+    background-color: #4267B2; /* Bleu plus foncé officiel */
+}
+
+.social-icons .instagram:hover {
+    background: linear-gradient(45deg, #ff9900, #ff5a5f, #c13584); /* Teintes plus chaudes */
+}
+
+.social-icons .youtube:hover {
+    background-color: #CC0000; /* Rouge plus foncé officiel */
+}
+
+.social-icons a:hover {
+    transform: scale(1.1);
+}
+
+

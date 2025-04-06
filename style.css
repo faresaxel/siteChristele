@@ -394,6 +394,7 @@ footer {
     flex: 1;
     font-family: 'Lora', serif;
     color: #555;
+	padding: 20px;
     line-height: 1.7;
     text-align: justify;
 }
@@ -423,9 +424,12 @@ footer {
 }
 
 #tarifs-page .tarif-photo {
-    width: 30%;
+    width: 40%;
+	padding: 0 20px;
     border-radius: 30px;
-    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    object-fit: cover; 
+    
+	box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
 }
 
 #tarifs-page .tarif-section {
@@ -450,6 +454,43 @@ footer {
     transform: scale(1.05);
     box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
 }
+/* Stylisation du numéro de téléphone pour la page tarifs */
+
+
+/* Stylisation du numéro de téléphone */
+#contact .tarif-phone-number {
+    margin-top: 30px;
+    text-align: center;
+    font-size: 1.0em;
+    font-weight: bold;
+}
+
+/* Stylisation du lien du numéro de téléphone */
+#contact .tarif-phone-number a {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    background-color: #4B0082; /* Violet Profond */
+    color: white;
+    padding: 12px 20px;
+    border-radius: 25px;
+    text-decoration: none;
+    transition: background-color 0.3s ease, transform 0.3s ease;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
+}
+
+/* Effet au survol du lien */
+#contact .tarif-phone-number a:hover {
+    background-color: #6A0DAD; /* Violet Royal */
+    transform: scale(1.1);
+}
+
+/* Icône du téléphone à côté du numéro */
+#contact .tarif-phone-number a i {
+    margin-right: 8px;
+    font-size: 1.3em;
+}
+
 
 
 
@@ -712,6 +753,11 @@ footer {
     background-color: #FF0000;
 }
 
+/* Nouvelle couleur pour Gmail */
+.social-icons .gmail {
+    background-color: #DB4437; /* Couleur rouge typique de Gmail */
+}
+
 /* Effet au survol */
 .social-icons .facebook:hover {
     background-color: #4267B2; /* Bleu plus foncé officiel */
@@ -725,9 +771,15 @@ footer {
     background-color: #CC0000; /* Rouge plus foncé officiel */
 }
 
+/* Effet au survol pour Gmail */
+.social-icons .gmail:hover {
+    background-color: #C13584; /* Couleur rose/violet typique de Gmail */
+}
+
 .social-icons a:hover {
     transform: scale(1.1);
 }
+
 .phone-number {
     margin-top: 15px;
     text-align: center;
@@ -747,6 +799,7 @@ footer {
     transition: background-color 0.3s ease, transform 0.3s ease;
     box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
 }
+
 
 
 .phone-number a:hover {

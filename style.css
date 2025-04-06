@@ -64,6 +64,15 @@ h4 {
     height: 600px;
     border-radius: 30px; 
     object-fit: cover; 
+    margin-right: 30px;
+	box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+.coach-photo-pages {
+    width: 30%;
+    height: 250px;
+    border-radius: 30px; 
+    object-fit: cover; 
     margin-right: 20px;
 	box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
 }
@@ -246,6 +255,16 @@ footer {
     padding: 30px;
     background-color: rgba(255, 255, 255, 0.8); /* Transparence */
     border-radius: 10px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+}
+
+/* Conteneur de la pages site (l'impression de 2 pages) */
+.content-wrapper-pages {
+  max-width: 1200px;
+    margin: 50px auto;
+    padding: 30px;
+    background-color: rgba(255, 255, 255, 0.8); /* Transparence */
+    border-radius: 20px;
     box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
 }
 

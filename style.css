@@ -902,6 +902,28 @@ box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
     transform: scale(1.1);
 }
 
+.google-review-button {
+    display: flex;
+    background-color: #4285F4;
+    color: white;
+    padding: 10px 20px;
+    border-radius: 5px;
+    text-decoration: none;
+    font-weight: bold;
+	text-align: center;
+	justify-content: center;
+    transition: background-color 0.3s;
+	
+    justify-content: center; /* Centre horizontalement */
+    align-items: center;
+    margin: 20px auto; /* Centre avec une marge automatique */
+   
+    width: fit-content; /* Ajuste la largeur au contenu */
+}
+.google-review-button:hover {
+    background-color: #357ae8;
+}
+
 
 
 

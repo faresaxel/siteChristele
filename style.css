@@ -463,8 +463,8 @@ footer {
 }
 
  #about .coach-photo {
-    width: 200px;
-	height: auto;
+    width: 80%;
+	height: 200px;
     max-width: 300px;
     margin: 0 auto;
     border-radius: 20px;
@@ -579,7 +579,7 @@ footer {
 	
 #about .coach-photo{
     width: 80%;
-	height: auto;
+	height: 200px;
     max-width: 300px;
     margin: 0 auto;
     border-radius: 20px;

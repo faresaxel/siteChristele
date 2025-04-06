@@ -550,6 +550,14 @@ footer {
     font-size: 7px;
     font-weight: bold;
 }
+.coach-photo-pages {
+    width: 30%;
+    height: 250px;
+    border-radius: 30px; 
+    object-fit: cover; 
+    margin-right: 20px;
+	box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
 
  #about .coach-photo {
     width: 80%;
@@ -692,6 +700,15 @@ footer {
     text-align: center;
     font-size: 7px;
     font-weight: bold;
+}
+
+.coach-photo-pages {
+    width: 30%;
+    height: 250px;
+    border-radius: 30px; 
+    object-fit: cover; 
+    margin-right: 20px;
+	box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
 }
 	
 #about .coach-photo{

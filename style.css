@@ -496,6 +496,19 @@ footer {
 
 /* Par défaut sur mobile, affiche la description sans hover */
 @media (max-width: 768px) {
+	
+/* Titre */
+.header-title {
+    font-family: 'Arial', sans-serif;
+    font-size: 1.5em;
+    margin-bottom: 15px;
+    text-shadow: 2px 2px 6px rgba(0, 0, 0, 0.2);
+    position: relative;
+    z-index: 2; /* Permet de garder le titre devant */
+    opacity: 0;
+    transform: translateY(50px);
+    animation: fadeInUp 1s forwards;
+}
 .phone-number {
     margin-top: 15px;
     text-align: center;
@@ -611,6 +624,18 @@ footer {
 
 @media (max-width: 480px) {
 	
+/* Titre */
+.header-title {
+    font-family: 'Arial', sans-serif;
+    font-size: 1.5em;
+    margin-bottom: 15px;
+    text-shadow: 2px 2px 6px rgba(0, 0, 0, 0.2);
+    position: relative;
+    z-index: 2; /* Permet de garder le titre devant */
+    opacity: 0;
+    transform: translateY(50px);
+    animation: fadeInUp 1s forwards;
+}	
 .phone-number {
     margin-top: 15px;
     text-align: center;
@@ -783,7 +808,7 @@ footer {
 .phone-number {
     margin-top: 15px;
     text-align: center;
-    font-size: 20px;
+    font-size: 18px;
     font-weight: bold;
 }
 

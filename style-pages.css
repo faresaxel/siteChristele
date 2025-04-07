@@ -265,10 +265,11 @@ footer {
 .content-wrapper-pages {
   max-width: 1200px;
     margin: 50px auto;
-    padding: 30px;
+    padding: 60px;
     background-color: rgba(255, 255, 255, 0.8); /* Transparence */
     border-radius: 20px;
     box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+	padding-top: 100px;
 }
 
 /* Wrapper pour l'en-tête avec effet */
@@ -291,6 +292,7 @@ footer {
 .header-wrapper .container {
     max-width: 1200px;
     margin: 0 auto;
+	 height: 70px; 
     position: relative;
     z-index: 2; /* Permet de rendre le contenu visible par-dessus l'effet */
 }
@@ -580,7 +582,8 @@ footer {
         gap: 20px; /* Réduit l’espace entre les éléments */
         width: 100%; /* Prend toute la largeur */
         text-align: center; /* Centre le texte et l’image */
-    }
+        
+	}
 
  .about-text {
     width: 95%;

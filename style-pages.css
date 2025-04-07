@@ -525,11 +525,20 @@ footer {
 
 /* Par défaut sur mobile, affiche la description sans hover */
 @media (max-width: 768px) {
+/* Conteneur */
+.header-wrapper .container {
+    max-width: 768px;
+    margin: 0 auto;
+	height: 60px; 
+    position: relative;
+    z-index: 2; /* Permet de rendre le contenu visible par-dessus l'effet */
+	
+}
 	
 /* Titre */
 .header-title {
     font-family: 'Arial', sans-serif;
-    font-size: 1.7em;
+    font-size: 1.4em;
     margin-bottom: 15px;
     text-shadow: 2px 2px 6px rgba(0, 0, 0, 0.2);
     position: relative;
@@ -542,7 +551,7 @@ footer {
 /* Sous-titre */
 .header-subtitle {
     font-family: 'Helvetica', sans-serif;
-    font-size: 0.9em;
+    font-size: 0.7em;
     line-height: 1.5;
     margin: 0 auto;
     width: 80%;
@@ -682,7 +691,7 @@ footer {
 /* Titre */
 .header-title {
     font-family: 'Arial', sans-serif;
-    font-size: 1.7em;
+    font-size: 1.4em;
     margin-bottom: 15px;
     text-shadow: 2px 2px 6px rgba(0, 0, 0, 0.2);
     position: relative;
@@ -695,7 +704,7 @@ footer {
 /* Sous-titre */
 .header-subtitle {
     font-family: 'Helvetica', sans-serif;
-    font-size: 0.9em;
+    font-size: 0.7em;
     line-height: 1.5;
     margin: 0 auto;
     width: 80%;
@@ -707,6 +716,7 @@ footer {
     animation: fadeInUp 1.2s forwards;
     animation-delay: 0.2s;
 }
+
 .phone-number {
     margin-top: 15px;
     text-align: center;

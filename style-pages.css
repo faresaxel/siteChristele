@@ -530,7 +530,7 @@ footer {
 .content-wrapper-pages {
   max-width: 1200px;
     margin: 50px auto;
-    padding: 20px;
+    padding: 30px;
     background-color: rgba(255, 255, 255, 0.8); /* Transparence */
     border-radius: 20px;
     box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
@@ -699,6 +699,17 @@ footer {
 
 
 @media (max-width: 480px) {
+	
+/* Conteneur de la pages site (l'impression de 2 pages) */
+.content-wrapper-pages {
+  max-width: 1200px;
+    margin: 50px auto;
+    padding: 30px;
+    background-color: rgba(255, 255, 255, 0.8); /* Transparence */
+    border-radius: 20px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+	padding-top: 50px;
+}	
 	
 /* Titre */
 .header-title {

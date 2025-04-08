@@ -874,7 +874,7 @@ box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
 /* Nouvelle couleur pour Gmail */
 .social-icons .gmail {
     background-color: #DB4437; /* Couleur rouge typique de Gmail */
-    
+    display: inline-flex;
 }
 
 /* Couleur pour WhatsApp */

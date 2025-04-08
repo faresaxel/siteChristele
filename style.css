@@ -522,6 +522,12 @@ footer {
     background-color: #25D366; /* Vert officiel de WhatsApp */
     display: block;
 }
+
+/* Nouvelle couleur pour Gmail */
+.social-icons .gmail {
+    background-color: #DB4437; /* Couleur rouge typique de Gmail */
+    display: none;
+}	
 	
 /* Titre */
 .header-title {
@@ -678,6 +684,11 @@ footer {
 .social-icons .whatsapp {
     background-color: #25D366; /* Vert officiel de WhatsApp */
     display: block;
+}
+/* Nouvelle couleur pour Gmail */
+.social-icons .gmail {
+    background-color: #DB4437; /* Couleur rouge typique de Gmail */
+    display: none;
 }
 	
 /* Titre */
@@ -863,6 +874,7 @@ box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
 /* Nouvelle couleur pour Gmail */
 .social-icons .gmail {
     background-color: #DB4437; /* Couleur rouge typique de Gmail */
+  
 }
 
 /* Couleur pour WhatsApp */

@@ -265,7 +265,7 @@ footer {
 .content-wrapper-pages {
   max-width: 1200px;
     margin: 50px auto;
-    padding: 50px;
+    padding: 100px;
     background-color: rgba(255, 255, 255, 0.8); /* Transparence */
     border-radius: 20px;
     box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);

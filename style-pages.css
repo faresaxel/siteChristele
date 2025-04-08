@@ -711,6 +711,16 @@ footer {
     box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
 	padding-top: 50px;
 }	
+
+/* Conteneur */
+.header-wrapper .container {
+    max-width: 768px;
+    margin: 0 auto;
+	height: 60px; 
+    position: relative;
+    z-index: 2; /* Permet de rendre le contenu visible par-dessus l'effet */
+	
+}
 	
 /* Titre */
 .header-title {

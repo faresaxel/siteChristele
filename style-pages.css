@@ -908,6 +908,17 @@ box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
     background-color: #DB4437; /* Couleur rouge typique de Gmail */
 }
 
+/* Couleur pour WhatsApp */
+.social-icons .whatsapp {
+    background-color: #25D366; /* Vert officiel de WhatsApp */
+    border-radius: 50%; /* Pour arrondir l'icône */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 40px; /* Ajuster la taille de l'icône */
+    height: 40px;
+}
+
 /* Effet au survol */
 .social-icons .facebook:hover {
     background-color: #4267B2; /* Bleu plus foncé officiel */
@@ -926,9 +937,15 @@ box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
     background-color: #C13584; /* Couleur rose/violet typique de Gmail */
 }
 
+/* Effet au survol pour WhatsApp */
+.social-icons .whatsapp:hover {
+    background-color: #1EBEA5; /* Teinte plus foncée de vert */
+}
+
 .social-icons a:hover {
     transform: scale(1.1);
 }
+
 
 .phone-number {
     margin-top: 15px;

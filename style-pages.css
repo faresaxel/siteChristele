@@ -470,6 +470,7 @@ footer {
     font-family: 'Lora', serif;
     color: #555;
     line-height: 1.7;
+	word-spacing: 0px; /* Réduit l'espacement entre les mots */
     text-align: justify;
 }
 

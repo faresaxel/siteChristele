@@ -13,7 +13,7 @@
     <div class="container">
         <link href="https://fonts.googleapis.com/css2?family=Lora:wght@400;700&family=Montserrat:wght@600&display=swap" rel="stylesheet">
 		 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css">
-		 <script src="https://www.paypal.com/sdk/js?client-id=AXvQZLJHo2DjsPYtCiwbGe6H3ktVbbRRObrprNDmBqgVNcJgXhcqu7HQddkvoBAgPtYSAqskY9bZvqaS&currency=EUR"></script>
+		 <script src="https://www.paypal.com/sdk/js?client-id=AXlQfJVUqVGL8YuZk5oF51BlEDLxJc-qfDDybcbMlXB30HjFfpaqbkdxvDEyIltCSHrUtoyCEdc1D5pr&currency=EUR"></script>
         <h1 class="header-title">Mes Offres et Tarifs</h1>
         <p class="header-subtitle">Trouvez l'Offre Qui Vous Correspond</p>
     </div>
@@ -31,7 +31,11 @@
                 <p>Une séance ciblée <strong>de 1 heure</strong> pour y voir plus clair, comprendre une situation ou relancer une dynamique.
 Idéal pour une problématique ponctuelle, une décision à prendre ou une lecture intuitive rapide.</p>
 				<p class="pricing"><strong>Prix : 90 Euros</strong></p>
-                
+               
+        <div class="payment-container">
+        <h1>payer votre formule</h1>
+        <div id="paypal-button-90"></div>
+        </div>			   
             </div>
         </div>
     </div>
@@ -45,12 +49,13 @@ Idéal pour une problématique ponctuelle, une décision à prendre ou une lectu
             <p>Profil de personnalité, postures karmiques et guidance stratégique pour retrouver votre centricité.</p>
             <p class="pricing"><strong>Prix : 360 Euros</strong></p>
 
-             <div class="payment-container">
+        <div class="payment-container">
         <h1>payer votre formule</h1>
-        <p>Profitez de votre coaching personnalisé pour <strong>360€</strong>.</p>
-        <div id="paypal-button-container"></div>
-    </div>
+        <div id="paypal-button-360"></div>
         </div>
+        </div>
+		
+		
     </div>
 </div>
 
@@ -65,7 +70,11 @@ Idéal pour une problématique ponctuelle, une décision à prendre ou une lectu
 Pour celles et ceux qui veulent un vrai passage de cap, en conscience.</p>
                  <p>  </p>
                  <p class="pricing"><strong>Prix : 600 Euros</strong></p>
-            </div>
+         <div class="payment-container">
+        <h1>payer votre formule</h1>
+        <div id="paypal-button-600"></div>
+        </div>           
+		   </div>
         </div>
     </div>
 
@@ -78,7 +87,12 @@ Pour celles et ceux qui veulent un vrai passage de cap, en conscience.</p>
                 <p>Recevez des réponses claires et intuitives lors d'une <strong>séance de 30 min à distance (Skype, whatsapp...).</strong></p>
                 <p>Les lectures sont des moments de clarté qui vous permettent de mieux comprendre vos aspirations et d’avancer sereinement.</p>
 				<p class="pricing"><strong>Prix : 50 Euros<strong></p>
-            </div>
+             <div class="payment-container">
+        <h1>payer votre formule</h1>
+        <div id="paypal-button-50"></div>
+        </div>
+			
+			</div>
         </div>
     </div>
 </section>
@@ -121,22 +135,33 @@ Pour celles et ceux qui veulent un vrai passage de cap, en conscience.</p>
     </div>
 </footer>
 
-    <script>
-      paypal.Buttons({
-        createOrder: function(data, actions) {
-          return actions.order.create({
-            purchase_units: [{
-              amount: { value: '1.00' }
-            }]
-          });
-        },
-        onApprove: function(data, actions) {
-          return actions.order.capture().then(function(details) {
-            alert('Merci ' + details.payer.name.given_name + ' pour votre paiement !');
-            window.location.href = "https://faresaxel.github.io/siteChristele/merci";
-          });
-        }
-      }).render('#paypal-button-container');
-    </script>
+    <script src="https://www.paypal.com/sdk/js?client-id=TON_CLIENT_ID&currency=EUR"></script>
+
+<script>
+    function renderPayPalButton(containerId, price) {
+        paypal.Buttons({
+            createOrder: function(data, actions) {
+                return actions.order.create({
+                    purchase_units: [{
+                        amount: { value: price }
+                    }]
+                });
+            },
+            onApprove: function(data, actions) {
+                return actions.order.capture().then(function(details) {
+                    alert('Merci ' + details.payer.name.given_name + ' pour votre paiement de ' + price + '€ !');
+                    window.location.href = "https://tonsite.com/merci";
+                });
+            }
+        }).render(containerId);
+    }
+
+    // Activation des boutons PayPal pour chaque tarif
+    renderPayPalButton('#paypal-button-50', '50.00');
+    renderPayPalButton('#paypal-button-90', '90.00');
+    renderPayPalButton('#paypal-button-360', '360.00');
+    renderPayPalButton('#paypal-button-600', '600.00');
+</script>
+
 </body>
 </html>

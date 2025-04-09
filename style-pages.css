@@ -1001,7 +1001,7 @@ box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
         text-align: center;
     }
 
-#paypal-button-container {
+#paypal-button-50 {
    display: flex;
     background-color: #4285F4;
     color: white;
@@ -1019,4 +1019,64 @@ box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
    
     width: fit-content; /* Ajuste la largeur au contenu */
 }
+
+#paypal-button-90 {
+   display: flex;
+    background-color: #4285F4;
+    color: white;
+    padding: 10px 20px;
+    border-radius: 5px;
+    text-decoration: none;
+    font-weight: bold;
+	text-align: center;
+	justify-content: center;
+    transition: background-color 0.3s;
+	
+    justify-content: center; /* Centre horizontalement */
+    align-items: center;
+    margin: 20px auto; /* Centre avec une marge automatique */
+   
+    width: fit-content; /* Ajuste la largeur au contenu */
+}
+
+
+#paypal-button-360 {
+   display: flex;
+    background-color: #4285F4;
+    color: white;
+    padding: 10px 20px;
+    border-radius: 5px;
+    text-decoration: none;
+    font-weight: bold;
+	text-align: center;
+	justify-content: center;
+    transition: background-color 0.3s;
+	
+    justify-content: center; /* Centre horizontalement */
+    align-items: center;
+    margin: 20px auto; /* Centre avec une marge automatique */
+   
+    width: fit-content; /* Ajuste la largeur au contenu */
+}
+
+#paypal-button-600 {
+   display: flex;
+    background-color: #4285F4;
+    color: white;
+    padding: 10px 20px;
+    border-radius: 5px;
+    text-decoration: none;
+    font-weight: bold;
+	text-align: center;
+	justify-content: center;
+    transition: background-color 0.3s;
+	
+    justify-content: center; /* Centre horizontalement */
+    align-items: center;
+    margin: 20px auto; /* Centre avec une marge automatique */
+   
+    width: fit-content; /* Ajuste la largeur au contenu */
+}
+
+
 

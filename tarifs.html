@@ -12,6 +12,8 @@
 <header class="header-wrapper">
     <div class="container">
         <link href="https://fonts.googleapis.com/css2?family=Lora:wght@400;700&family=Montserrat:wght@600&display=swap" rel="stylesheet">
+		 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css">
+		 <script src="https://www.paypal.com/sdk/js?client-id=AXvQZLJHo2DjsPYtCiwbGe6H3ktVbbRRObrprNDmBqgVNcJgXhcqu7HQddkvoBAgPtYSAqskY9bZvqaS&currency=EUR"></script>
         <h1 class="header-title">Mes Offres et Tarifs</h1>
         <p class="header-subtitle">Trouvez l'Offre Qui Vous Correspond</p>
     </div>
@@ -30,23 +32,27 @@
 Idéal pour une problématique ponctuelle, une décision à prendre ou une lecture intuitive rapide.</p>
 				<p class="pricing"><strong>Prix : 90 Euros</strong></p>
                 
-                
             </div>
         </div>
     </div>
 
-    <!-- Coaching Professionnel -->
-    <div class="tarif-section">
-        <h2 class="tarif-header">Formule Alignement</h2>
-        <div class="tarif-content">
-           
-            <div class="tarif-text">
-                <p>Un accompagnement en <strong>3 séances de 1h30</strong> pour comprendre votre fonctionnement, vos blocages et vos aspirations profondes.</p>  
-                <p>Profil de personnalité, postures karmiques et guidance stratégique pour retrouver votre centricité.</p>
-				<p class="pricing"><strong>Prix : 360 Euros</strong></p>
-            </div>
+<!-- Coaching Professionnel -->
+<div class="tarif-section">
+    <h2 class="tarif-header">Formule Alignement</h2>
+    <div class="tarif-content">
+        <div class="tarif-text">
+            <p>Un accompagnement en <strong>3 séances de 1h30</strong> pour comprendre votre fonctionnement, vos blocages et vos aspirations profondes.</p>  
+            <p>Profil de personnalité, postures karmiques et guidance stratégique pour retrouver votre centricité.</p>
+            <p class="pricing"><strong>Prix : 360 Euros</strong></p>
+
+             <div class="payment-container">
+        <h1>payer votre formule</h1>
+        <p>Profitez de votre coaching personnalisé pour <strong>360€</strong>.</p>
+        <div id="paypal-button-container"></div>
+    </div>
         </div>
     </div>
+</div>
 
   <!-- Médiumnité -->
     <div class="tarif-section">
@@ -57,7 +63,8 @@ Idéal pour une problématique ponctuelle, une décision à prendre ou une lectu
                 <p>Un parcours complet en <strong>5 séances de 1h30</strong> pour transformer votre vie en profondeur.</p>               
                 <p>Reconnexion à votre mission de vie, libération des schémas répétitifs et ancrage de nouveaux choix.
 Pour celles et ceux qui veulent un vrai passage de cap, en conscience.</p>
-				<p class="pricing"><strong>Prix : 600 Euros</strong></p>
+                 <p>  </p>
+                 <p class="pricing"><strong>Prix : 600 Euros</strong></p>
             </div>
         </div>
     </div>
@@ -68,7 +75,7 @@ Pour celles et ceux qui veulent un vrai passage de cap, en conscience.</p>
         <div class="tarif-content">
             
             <div class="tarif-text">
-                <p>Recevez des réponses claires et intuitives lors d'une <strong>séance de 30 min à distance (Skype, whatsapp...)</strong></p>
+                <p>Recevez des réponses claires et intuitives lors d'une <strong>séance de 30 min à distance (Skype, whatsapp...).</strong></p>
                 <p>Les lectures sont des moments de clarté qui vous permettent de mieux comprendre vos aspirations et d’avancer sereinement.</p>
 				<p class="pricing"><strong>Prix : 50 Euros<strong></p>
             </div>
@@ -94,14 +101,15 @@ Pour celles et ceux qui veulent un vrai passage de cap, en conscience.</p>
 		  <div class="tarif-phone-number">
             <p style="font-family: 'Lora', sans-serif;">Ou bien par email:</p> 
         </div>
-        <!-- Formulaire de contact -->
-        <form id="contact-form">
-            <input type="text" id="name" name="name" placeholder="Votre nom" required>
-            <input type="email" id="email" name="email" placeholder="Votre email" required>
-            <input type="tel" id="telephone" name="telephone" placeholder="Votre téléphone" required>
-            <textarea id="message" name="message" placeholder="Votre message" required></textarea>
-            <button type="submit">Envoyer</button>
-        </form>
+        <!-- Icônes des réseaux sociaux -->
+		<div class="social-icons">
+		
+			<!-- Icône Gmail -->
+			<a href="mailto:christelehachette@gmail.com" target="_blank" class="gmail">
+				<i class="fab fa-google"></i>
+			</a>
+	
+		</div>
     </div>
 </section>
 
@@ -113,5 +121,22 @@ Pour celles et ceux qui veulent un vrai passage de cap, en conscience.</p>
     </div>
 </footer>
 
+    <script>
+      paypal.Buttons({
+        createOrder: function(data, actions) {
+          return actions.order.create({
+            purchase_units: [{
+              amount: { value: '1.00' }
+            }]
+          });
+        },
+        onApprove: function(data, actions) {
+          return actions.order.capture().then(function(details) {
+            alert('Merci ' + details.payer.name.given_name + ' pour votre paiement !');
+            window.location.href = "https://faresaxel.github.io/siteChristele/merci";
+          });
+        }
+      }).render('#paypal-button-container');
+    </script>
 </body>
 </html>

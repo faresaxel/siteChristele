@@ -58,6 +58,20 @@ h5{
     margin: 0 auto;
     font-size: 20px;
     margin-bottom: 20px;
+	margin-top: 20px;
+    color: #0d47a1;  /* Bleu Indigo */
+}
+
+h6{
+    text-align: left;
+    margin: 0 auto;
+    font-size: 17px;
+    margin-bottom: 20px;
+    color: #0d47a1;  /* Bleu Indigo */
+}
+
+h7{
+    font-weight: bold;
     color: #0d47a1;  /* Bleu Indigo */
 }
 
@@ -434,6 +448,13 @@ footer {
 	padding: 20px;
     line-height: 1.7;
     text-align: justify;
+}
+
+.pricing {
+    margin-top: 15px;  /* Ajoute un espace entre le texte et le prix */
+    font-size: 18px;    /* Ajuste la taille si nécessaire */
+    font-weight: bold;  /* Rend le prix plus visible */
+    color: #333;        /* Assure une bonne lisibilité */
 }
 
 /* Style des prix */

@@ -402,7 +402,7 @@ footer {
     justify-content: space-between;
     overflow: hidden;
     transition: transform 0.3s ease, box-shadow 0.3s ease;
-	width: 600px; /*largeur de la bulle */
+	max-width: 1000px; /*largeur de la bulle */
     max-width: 1000px; /* Limite la largeur de la bulle */
     margin: 0 auto; /* Centre chaque bulle */
 }

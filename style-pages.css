@@ -19,7 +19,7 @@ body {
 }
 
 header {
-    background-color: #3f51b5;  /* Bleu Indigo */
+    background-color: #0d47a1;  /* Bleu Indigo */
     color: white;
     padding: 40px 0;
     text-align: center;
@@ -42,7 +42,7 @@ h2 {
     text-align: center;
     font-size: 32px;
     margin-bottom: 20px;
-    color: #3f51b5;  /* Bleu Indigo */
+    color: #0d47a1;  /* Bleu Indigo */
 }
 
 h4 {
@@ -50,7 +50,15 @@ h4 {
     margin: 0 auto;
     font-size: 28px;
     margin-bottom: 20px;
-    color: #3f51b5;  /* Bleu Indigo */
+    color: #0d47a1;  /* Bleu Indigo */
+}
+
+h5{
+    text-align: center;
+    margin: 0 auto;
+    font-size: 20px;
+    margin-bottom: 20px;
+    color: #0d47a1;  /* Bleu Indigo */
 }
 
 /* À propos */
@@ -101,7 +109,7 @@ h4 {
     border-radius: 8px;
     box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
     text-align: center;
-    border-left: 5px solid #3f51b5;  /* Bleu Indigo */
+    border-left: 5px solid #0d47a1;  /* Bleu Indigo */
     position: relative;
     overflow: hidden;
     cursor: pointer;
@@ -123,7 +131,7 @@ h4 {
 .service h3 {
     font-size: 18px;
     margin-bottom: 10px;
-    color: #3f51b5;
+    color: #0d47a1;
 }
 
 /* Description en dessous */
@@ -231,7 +239,7 @@ form input, form textarea {
 
 form button {
     padding: 10px 20px;
-    background-color: #3f51b5;  /* Bleu Indigo */
+    background-color: #0d47a1;  /* Bleu Indigo */
     color: white;
     border: none;
     border-radius: 5px;
@@ -244,7 +252,7 @@ form button:hover {
 
 /* Footer */
 footer {
-    background-color: #3f51b5;  /* Bleu Indigo */
+    background-color: #0d47a1;  /* Bleu Indigo */
     color: white;
     padding: 20px;
     text-align: center;
@@ -405,8 +413,8 @@ footer {
 #tarifs-page .tarif-header {
     font-family: 'Lora', sans-serif;
     text-align: center;
-    font-size: 2.5em;
-    color: #3f51b5;
+    font-size: 1.8em;
+    color: #0d47a1;
     margin-bottom: 40px;
 }
 
@@ -432,7 +440,7 @@ footer {
 #tarifs-page .tarif-service .pricing {
     font-size: 1.5em;
     font-weight: bold;
-    color: #3f51b5;
+    color: #0d47a1;
     margin-top: 20px;
 }
 

@@ -285,7 +285,7 @@ footer {
 
 /* Conteneur de la pages site (l'impression de 2 pages) */
 .content-wrapper-pages {
-  max-width: 1200px;
+    max-width: 1200px;
     margin: 50px auto;
     padding: 50px;
     background-color: rgba(255, 255, 255, 0.8); /* Transparence */
@@ -402,7 +402,7 @@ footer {
     justify-content: space-between;
     overflow: hidden;
     transition: transform 0.3s ease, box-shadow 0.3s ease;
-	max-width: 1000px; /*largeur de la bulle */
+	width: 1000px; /*largeur de la bulle */
     max-width: 1000px; /* Limite la largeur de la bulle */
     margin: 0 auto; /* Centre chaque bulle */
 }
@@ -720,7 +720,7 @@ footer {
 }
 
 #tarifs-page .tarif-section {
-    padding: 40px 15px;
+    padding: 45px 15px;
 }
 
 
@@ -894,7 +894,7 @@ box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
 }
 
 #tarifs-page .tarif-section {
-    padding: 40px 15px;
+    padding: 45px 15px;
 }
 
 

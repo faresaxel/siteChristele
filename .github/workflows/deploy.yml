@@ -16,9 +16,9 @@ jobs:
       - name: Upload via SFTP
         uses: pressidium/lftp-action@v1
         with:
-          host: ${{SFTP_HOST}}
-          username: ${{SFTP_USER}}
-          password: ${{SFTP_PASS}}
+          host: ${{ secrets.SFTP_HOST }}
+          username: ${{ secrets.SFTP_USER }}
+          password: ${{ secrets.SFTP_PASS }}
           localDir: ./               # adapte si tu utilises un build (ex: ./dist)
           remoteDir: vhosts/e625d32915.url-de-test.ws/
           options: "--delete"

@@ -21,4 +21,5 @@ jobs:
           password: ${{ secrets.SFTP_PASS }}
           port: 22
           source: "."                          # Ou ./dist si tu build ton site
-          target: "vhosts/e625d32915.url-de-test.ws"
+          target: "/home/users/a6fa42b6-56c1-11e7-b991-00163e61ef31/vhosts/e625d32915.url-de-test.ws/"
+

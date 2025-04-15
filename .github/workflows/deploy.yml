@@ -1,0 +1,24 @@
+name: Deploy to Gandi via SFTP
+
+on:
+  push:
+    branches:
+      - main
+
+jobs:
+  deploy:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout code
+        uses: actions/checkout@v3
+
+      - name: Upload via SFTP
+        uses: pressidium/lftp-action@v1
+        with:
+          host: ${{ SFTP_HOST }}
+          username: ${{ SFTP_USER }}
+          password: ${{ SFTP_PASS }}
+          localDir: ./               # adapte si tu utilises un build (ex: ./dist)
+          remoteDir: vhosts/e625d32915.url-de-test.ws/
+          options: "--delete"

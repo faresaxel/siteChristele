@@ -3,11 +3,11 @@ name: Deploy to Gandi via SFTP
 on:
   push:
     branches:
-      - main  # Déployer à chaque push sur la branche "main"
+      - main
 
 jobs:
   deploy:
-    runs-on: ubuntu-latest  # Utilisation de l'environnement Ubuntu
+    runs-on: ubuntu-latest
 
     steps:
       # 1. Checkout du code depuis le repository
@@ -20,9 +20,9 @@ jobs:
         with:
           ssh-private-key: ${{ secrets.SFTP_SSH_PRIVATE_KEY }}  # Ajouter ta clé privée dans GitHub secrets
 
-      # 3. Télécharger et transférer les fichiers via SFTP
+      # 3. Télécharger et transférer les fichiers via SFTP (version stable)
       - name: Upload via SFTP
-        uses: appleboy/sftp-action@v1.0.0
+        uses: appleboy/sftp-action@v0.1.1  # Utilise la version stable la plus récente
         with:
           host: ${{ secrets.SFTP_HOST }}               # Adresse de ton serveur SFTP
           username: ${{ secrets.SFTP_USER }}           # Nom d'utilisateur pour se connecter en SFTP
@@ -30,4 +30,3 @@ jobs:
           port: 22                                     # Port SFTP (généralement 22)
           source: "./"                                 # Répertoire local à transférer
           target: "vhosts/e625d32915.url-de-test.ws/"  # Répertoire distant sur Gandi
-          # options: "--delete" # Option pour supprimer les fichiers distants non présents localement

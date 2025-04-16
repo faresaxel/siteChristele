@@ -20,13 +20,13 @@ jobs:
         with:
           ssh-private-key: ${{ secrets.SFTP_SSH_PRIVATE_KEY }}  # Ajouter ta clé privée dans GitHub secrets
 
-      # 3. Télécharger et transférer les fichiers via SFTP (version stable)
+      # 3. Télécharger et transférer les fichiers via SFTP (utilisation de lukemurris/sftp-deploy-action)
       - name: Upload via SFTP
-        uses: appleboy/sftp-action@v0.1.1  # Utilise la version stable la plus récente
+        uses: lukemurris/sftp-deploy-action@v2.1.0  # Nouvelle action stable
         with:
-          host: ${{ secrets.SFTP_HOST }}               # Adresse de ton serveur SFTP
-          username: ${{ secrets.SFTP_USER }}           # Nom d'utilisateur pour se connecter en SFTP
+          host: ${{ secrets.SFTP_HOST }}            # Adresse de ton serveur SFTP
+          username: ${{ secrets.SFTP_USER }}        # Nom d'utilisateur pour se connecter en SFTP
           private_key: ${{ secrets.SFTP_SSH_PRIVATE_KEY }}  # Clé privée SSH pour l'authentification
-          port: 22                                     # Port SFTP (généralement 22)
-          source: "./"                                 # Répertoire local à transférer
+          port: 22                                  # Port SFTP (généralement 22)
+          source: "./"                              # Répertoire local à transférer
           target: "vhosts/e625d32915.url-de-test.ws/"  # Répertoire distant sur Gandi

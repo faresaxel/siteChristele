@@ -1,25 +1,33 @@
-name: Deploy to Gandi via SSH
+name: Deploy to Gandi via SFTP
 
 on:
   push:
     branches:
-      - main
+      - main  # Déployer à chaque push sur la branche "main"
 
 jobs:
   deploy:
-    runs-on: ubuntu-latest
+    runs-on: ubuntu-latest  # Utilisation de l'environnement Ubuntu
 
     steps:
+      # 1. Checkout du code depuis le repository
       - name: Checkout code
         uses: actions/checkout@v3
 
-      - name: Setup SSH key
-        run: |
-          mkdir -p ~/.ssh
-          echo "${{ secrets.SSH_PRIVATE_KEY }}" > ~/.ssh/id_rsa
-          chmod 600 ~/.ssh/id_rsa
-          ssh-keyscan git.sd5.gpaas.net >> ~/.ssh/known_hosts
+      # 2. Ajouter la clé SSH au système
+      - name: Setup SSH Key
+        uses: webfactory/ssh-agent@v0.5.3
+        with:
+          ssh-private-key: ${{ secrets.SFTP_SSH_PRIVATE_KEY }}  # Ajouter ta clé privée dans GitHub secrets
 
-      - name: Deploy via SCP
-        run: |
-          scp -r . a6fa42b6-56c1-11e7-b991-00163e61ef31@git.sd5.gpaas.net:vhosts/e625d32915.url-de-test.ws/
+      # 3. Télécharger et transférer les fichiers via SFTP
+      - name: Upload via SFTP
+        uses: appleboy/sftp-action@v1.0.0
+        with:
+          host: ${{ secrets.SFTP_HOST }}               # Adresse de ton serveur SFTP
+          username: ${{ secrets.SFTP_USER }}           # Nom d'utilisateur pour se connecter en SFTP
+          private_key: ${{ secrets.SFTP_SSH_PRIVATE_KEY }}  # Clé privée SSH pour l'authentification
+          port: 22                                     # Port SFTP (généralement 22)
+          source: "./"                                 # Répertoire local à transférer
+          target: "vhosts/e625d32915.url-de-test.ws/"  # Répertoire distant sur Gandi
+          # options: "--delete" # Option pour supprimer les fichiers distants non présents localement

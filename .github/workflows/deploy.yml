@@ -3,30 +3,27 @@ name: Deploy to Gandi via SFTP
 on:
   push:
     branches:
-      - main
+      - main  # Déclenche l'action lors des push sur la branche principale
 
 jobs:
   deploy:
     runs-on: ubuntu-latest
 
     steps:
-      # 1. Checkout du code depuis le repository
-      - name: Checkout code
-        uses: actions/checkout@v3
+    - name: Checkout code
+      uses: actions/checkout@v2.3.4  # Checkout du code source
 
-      # 2. Ajouter la clé SSH au système
-      - name: Setup SSH Key
-        uses: webfactory/ssh-agent@v0.5.3
-        with:
-          ssh-private-key: ${{ secrets.SFTP_SSH_PRIVATE_KEY }}  # Ajouter ta clé privée dans GitHub secrets
+    - name: Setup SSH key
+      uses: webfactory/ssh-agent@v0.5.3  # Configure SSH agent pour l'authentification
+      with:
+        ssh-private-key: ${{ secrets.SFTP_SSH_PRIVATE_KEY }}  # Utilisation de ta clé privée SSH
 
-      # 3. Télécharger et transférer les fichiers via SFTP (utilisation de lukemurris/sftp-deploy-action)
-      - name: Upload via SFTP
-        uses: lukemurris/sftp-deploy-action@v2.1.0  # Nouvelle action stable
-        with:
-          host: ${{ secrets.SFTP_HOST }}            # Adresse de ton serveur SFTP
-          username: ${{ secrets.SFTP_USER }}        # Nom d'utilisateur pour se connecter en SFTP
-          private_key: ${{ secrets.SFTP_SSH_PRIVATE_KEY }}  # Clé privée SSH pour l'authentification
-          port: 22                                  # Port SFTP (généralement 22)
-          source: "./"                              # Répertoire local à transférer
-          target: "vhosts/e625d32915.url-de-test.ws/"  # Répertoire distant sur Gandi
+    - name: Upload Files via SFTP
+      uses: Creepios/sftp-action@v1.0.3  # Action SFTP pour uploader des fichiers
+      with:
+        host: ${{ secrets.SFTP_HOST }}             # Hôte SFTP (par exemple git.sd5.gpaas.net)
+        port: 22                                   # Port par défaut pour SFTP
+        username: ${{ secrets.SFTP_USER }}         # Nom d'utilisateur SFTP
+        private_key: ${{ secrets.SFTP_SSH_PRIVATE_KEY }}  # Clé privée SSH pour authentification
+        localPath: './'                            # Répertoire local à uploader (ou indique un dossier spécifique)
+        remotePath: 'vhosts/e625d32915.url-de-test.ws/'  # Dossier distant où les fichiers doivent être uploadés

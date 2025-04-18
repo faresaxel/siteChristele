@@ -634,6 +634,12 @@ footer {
     background-color: #357ae8;
 }
 
+.centered-paypal-message {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100px; /* tu peux ajuster selon ton besoin */
+}
 
 
 /* Par défaut sur mobile, affiche la description sans hover */

@@ -288,10 +288,10 @@ items.forEach(item => {
                 return; // Empêche l'envoi si l'email est invalide
             }
 
-            // Validation du téléphone international avec + ou 00
-            const phoneRegex = /^(\+|00)([1-9]{1,4})\s?(\d{1,4}[\s.-]?)?(\d{1,4}[\s.-]?)\d{4}$/;
+            // Validation du téléphone 
+            const phoneRegex = /^(0)[\s.-]?([1-9])([\s.-]?\d{2}){4}$/;
             if (!phoneRegex.test(telephone)) {
-                alert('Le numéro de téléphone est invalide. Veuillez entrer un numéro valide (format international, avec + ou 00).');
+                alert('Le numéro de téléphone est invalide. Veuillez entrer un numéro valide.');
                 return; // Empêche l'envoi si le téléphone est invalide
             }
 

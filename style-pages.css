@@ -557,6 +557,15 @@ footer {
 /* Par défaut sur mobile, affiche la description sans hover */
 @media (max-width: 768px) {
 
+/* Conteneur */
+.header-wrapper .container {
+    max-width: 1200px;
+    margin: 0 auto;
+	height: 40px; 
+    position: relative;
+    z-index: 2; /* Permet de rendre le contenu visible par-dessus l'effet */
+	
+}
 /* Conteneur de la pages site (l'impression de 2 pages) */
 .content-wrapper-pages {
   max-width: 1200px;
@@ -752,6 +761,15 @@ footer {
 
 
 @media (max-width: 480px) {
+/* Conteneur */
+.header-wrapper .container {
+    max-width: 1200px;
+    margin: 0 auto;
+	height: 40px; 
+    position: relative;
+    z-index: 2; /* Permet de rendre le contenu visible par-dessus l'effet */
+	
+}
 	
 /* Conteneur de la pages site (l'impression de 2 pages) */
 .content-wrapper-pages {

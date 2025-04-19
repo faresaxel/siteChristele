@@ -574,7 +574,7 @@ footer {
 .header-wrapper .container {
     max-width: 768px;
     margin: 0 auto;
-	height: 38px; 
+	height: 45px; 
     position: relative;
     z-index: 2; /* Permet de rendre le contenu visible par-dessus l'effet */
 	
@@ -769,7 +769,7 @@ footer {
 .header-wrapper .container {
     max-width: 768px;
     margin: 0 auto;
-	height: 38px; 
+	height: 45px; 
     position: relative;
     z-index: 2; /* Permet de rendre le contenu visible par-dessus l'effet */
 	

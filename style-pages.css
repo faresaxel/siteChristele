@@ -574,7 +574,7 @@ footer {
 .header-wrapper .container {
     max-width: 768px;
     margin: 0 auto;
-	height: 30px; 
+	height: 40px; 
     position: relative;
     z-index: 2; /* Permet de rendre le contenu visible par-dessus l'effet */
 	
@@ -758,7 +758,7 @@ footer {
 .content-wrapper-pages {
   max-width: 1200px;
     margin: 50px auto;
-    padding: 30px;
+    padding: 40px;
     background-color: rgba(255, 255, 255, 0.8); /* Transparence */
     border-radius: 20px;
     box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);

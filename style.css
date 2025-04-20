@@ -748,11 +748,6 @@ footer {
     opacity: 1;
 }
 
-.video-item:hover {
-    transform: translateY(-20px);
-    box-shadow: 0 12px 24px rgba(0, 0, 0, 0.2);
-}
-
 /* Espacement entre les bulles */
 #tarifs-page .tarif-section:not(:first-child) {
     margin-top: 20px; /* Réduit l'espace pour une meilleure lisibilité sur mobile */

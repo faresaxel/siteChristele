@@ -740,6 +740,11 @@ footer {
     opacity: 1;
 }
 
+.video-item:hover {
+    transform: none;
+    box-shadow: 0 12px 24px rgba(0, 0, 0, 0.2);
+}
+
 /* Espacement entre les bulles */
 #tarifs-page .tarif-section:not(:first-child) {
     margin-top: 20px; /* Réduit l'espace pour une meilleure lisibilité sur mobile */
@@ -900,6 +905,11 @@ box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
 .service:hover .service-description {
     display: block;
     opacity: 1;
+}
+
+.video-item:hover {
+    transform: none;
+    box-shadow: 0 12px 24px rgba(0, 0, 0, 0.2);
 }
 
 /* Espacement entre les bulles */

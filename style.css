@@ -179,7 +179,7 @@ h4 {
     transition: transform 0.3s ease, box-shadow 0.3s ease;
     min-width: 280px;
     max-width: 500px;
-	width: 350px;
+	width: 300px;
     flex-shrink: 0;
 }
 
@@ -757,7 +757,7 @@ footer {
 
 .video-item:hover {
     transform: none;
-    box-shadow: 0 12px 24px rgba(0, 0, 0, 0.2);
+    box-shadow: none;;
 }
 
 /* Espacement entre les bulles */
@@ -937,7 +937,7 @@ box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
 
 .video-item:hover {
     transform: none;
-    box-shadow: 0 12px 24px rgba(0, 0, 0, 0.2);
+    box-shadow: none;
 }
 
 /* Espacement entre les bulles */

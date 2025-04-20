@@ -1,0 +1,1173 @@
+/* Réinitialisation des marges et du padding */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f5f5f5;
+    color: #333;
+	padding-top: 80px; /* Ajuste selon la hauteur du header pour éviter que le contenu ne soit caché derrière */
+
+}
+
+.container {
+    width: 80%;
+    margin: 0 auto;
+}
+
+header {
+    background-color: #0d47a1;  /* Bleu Indigo */
+    color: white;
+    padding: 40px 0;
+    text-align: center;
+}
+
+header h1 {
+    font-size: 36px;
+}
+
+header p {
+    font-size: 10px;
+    margin-top: 10px;
+}
+
+section {
+    padding: 40px 0;
+}
+
+h2 {
+    text-align: center;
+    font-size: 32px;
+    margin-bottom: 20px;
+    color: #0d47a1;  /* Bleu Indigo */
+}
+
+h4 {
+    text-align: center;
+    margin: 0 auto;
+    font-size: 28px;
+    margin-bottom: 20px;
+    color: #0d47a1;  /* Bleu Indigo */
+}
+
+h5{
+    text-align: center;
+    margin: 0 auto;
+    font-size: 18px;
+    margin-bottom: 20px;
+	margin-top: 20px;
+    color: #0d47a1;  /* Bleu Indigo */
+}
+
+h6{
+    text-align: left;
+    margin: 0 auto;
+    font-size: 17px;
+    margin-bottom: 20px;
+    color: #0d47a1;  /* Bleu Indigo */
+}
+
+h7{
+    font-weight: bold;
+    color: #0d47a1;  /* Bleu Indigo */
+}
+
+/* À propos */
+.about-content {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;	
+}
+
+
+.coach-photo {
+    width: 30%;
+    height: 600px;
+    border-radius: 30px; 
+    object-fit: cover; 
+    margin-right: 30px;
+	box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+.coach-photo-pages {
+    width: 30%;
+    height: 260px;
+    border-radius: 30px; 
+    object-fit: cover; 
+    margin-right: 20px;
+	box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+.about-text {
+    width: 60%;
+}
+
+/* Style général des services */
+.services-list {
+    display: flex;
+    justify-content: space-around;
+    margin-top: 10px;
+    flex-wrap: wrap;
+	
+	 
+}
+
+.service {
+    width: 18%;
+
+    background-color: #fff;
+    padding: 17px;
+    border-radius: 8px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    text-align: center;
+    border-left: 5px solid #0d47a1;  /* Bleu Indigo */
+    position: relative;
+    overflow: hidden;
+    cursor: pointer;
+    transition: transform 0.3s ease, box-shadow 0.3s ease, width 0.3s ease;
+    margin-bottom: 20px;
+    height: 150px; /* Permet au bloc de grandir en fonction du contenu */
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+/* Agrandissement en largeur au survol */
+.service:hover {
+    transform: scale(1.20) translateY(-35px); /* Garde l'agrandissement en hauteur */
+    width: 25%;  /* Change cette valeur pour ajuster l'agrandissement en largeur */
+    box-shadow: 0 100px 20px rgba(0, 0, 0, 0.15);
+}
+
+.service h3 {
+    font-size: 18px;
+    margin-bottom: 10px;
+    color: #0d47a1;
+}
+
+/* Description en dessous */
+.service-description {
+    display: none;
+    background-color: #f5f5f5;
+    padding: 15px;
+    margin-top: 15px;
+    border-radius: 8px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    font-size: 13px;
+    color: #555;
+    opacity: 0;
+	 display: flex;
+    transition: opacity 0.3s ease;
+    margin-bottom: 10px; /* Ajout d'un espace en bas pour la description */
+}
+
+/* Affichage de la description au survol */
+.service:hover .service-description {
+    display: block;
+    opacity: 1;
+}
+
+/* Amélioration de l’apparence de la description */
+.service-description p {
+    font-style: italic;
+    text-align: center;
+    line-height: 1.5;
+    word-wrap: break-word; /* Empêche le texte de se couper de manière incorrecte */
+}
+
+/* Style des vidéos */
+.video-gallery-wrapper {
+    position: relative;
+    display: flex;
+    justify-content: center;
+}
+
+.video-gallery {
+    display: flex;
+    overflow-x: auto;
+    gap: 30px;
+    justify-content: flex-start;
+    padding-bottom: 20px;
+}
+
+.video-item {
+    background-color: #fff;
+    border-radius: 22px;
+    overflow: hidden;
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.1);
+    position: relative;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    min-width: 280px;
+    max-width: 500px;
+	width: 400px;
+    flex-shrink: 0;
+}
+
+.video-frame_m {
+    position: relative;
+    overflow: hidden;
+    padding-top: 70.25%; /* Pour garder un ratio de 16:9 */
+    width: 400px;
+}
+
+.video-iframe {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+}
+
+.video-item:hover {
+    transform: translateY(-20px);
+    box-shadow: 0 12px 24px rgba(0, 0, 0, 0.2);
+}
+
+.video-hover-text {
+    display: none;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background-color: rgba(0, 0, 0, 0.7);
+    color: white;
+    padding: 10px;
+    border-radius: 8px;
+    text-align: center;
+}
+
+.video-item:hover .video-hover-text {
+    display: block;
+}
+
+/* Formulaires */
+form input, form textarea {
+    width: 100%;
+    padding: 10px;
+    margin: 10px 0;
+    border-radius: 5px;
+    border: 1px solid #ddd;
+}
+
+form button {
+    padding: 10px 20px;
+    background-color: #0d47a1;  /* Bleu Indigo */
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+form button:hover {
+    background-color: #303f9f;  /* Une teinte plus foncée de Bleu Indigo */
+}
+
+/* Footer */
+footer {
+    background-color: #0d47a1;  /* Bleu Indigo */
+    color: white;
+    padding: 20px;
+    text-align: center;
+}
+
+/* Conteneur de la page principale (l'impression de 2 pages) */
+.content-wrapper {
+    max-width: 1200px;
+    margin: 50px auto;
+    padding: 30px;
+    background-color: rgba(255, 255, 255, 0.8); /* Transparence */
+    border-radius: 10px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+}
+
+
+/* Conteneur de la pages site (l'impression de 2 pages) */
+.content-wrapper-pages {
+    max-width: 1200px;
+    margin: 50px auto;
+    padding: 50px;
+    background-color: rgba(255, 255, 255, 0.8); /* Transparence */
+    border-radius: 20px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+	padding-top: 100px;
+}
+
+/* Wrapper pour l'en-tête avec effet */
+.header-wrapper {
+    background: linear-gradient(to right, #9c27b0, #0d47a1);
+    color: white;
+    text-align: center;
+    padding: 50px 0;
+    position: fixed;
+	top: 0;
+    left: 0;
+    width: 100%;
+	z-index: 1000;
+    overflow: hidden; /* Cache tout ce qui dépasse */
+    box-shadow: 0 8px 24px rgba(0, 0, 0, 0.2); /* Ombre pour un effet de profondeur */
+    transition: all 0.5s ease-in-out;
+}
+
+/* Conteneur */
+.header-wrapper .container {
+    max-width: 1200px;
+    margin: 0 auto;
+	height: 60px; 
+    position: relative;
+    z-index: 2; /* Permet de rendre le contenu visible par-dessus l'effet */
+	
+}
+
+/* Titre */
+.header-title {
+    font-family: 'Arial', sans-serif;
+    font-size: 2.2em;
+    margin-bottom: 15px;
+    text-shadow: 2px 2px 6px rgba(0, 0, 0, 0.2);
+    position: relative;
+    z-index: 2; /* Permet de garder le titre devant */
+    opacity: 0;
+    transform: translateY(50px);
+    animation: fadeInUp 1s forwards;
+}
+
+/* Sous-titre */
+.header-subtitle {
+    font-family: 'Helvetica', sans-serif;
+    font-size: 1.2em;
+    line-height: 1.5;
+    margin: 0 auto;
+    width: 80%;
+    text-shadow: 1px 1px 4px rgba(0, 0, 0, 0.2);
+    position: relative;
+    z-index: 2;
+    opacity: 0;
+    transform: translateY(50px);
+    animation: fadeInUp 1.2s forwards;
+    animation-delay: 0.2s;
+}
+
+/* Animation de l'apparition du titre et du sous-titre */
+@keyframes fadeInUp {
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+/* Effet lors du survol de l'en-tête */
+.header-wrapper:hover {
+    background: linear-gradient(to right, #9c27b0, #0d47a1);
+    transform: scale(1.05);
+    box-shadow: 0 16px 32px rgba(0, 0, 0, 0.3);
+}
+
+/* Ajouter des transitions pour les éléments texte */
+.header-wrapper .container h1, .header-wrapper .container p {
+    transition: opacity 0.5s ease-in-out, transform 0.5s ease-in-out;
+}
+
+
+#contact-form textarea {
+    width: 100%;               /* Prend toute la largeur disponible */
+    height: 150px;             /* Augmente la hauteur pour rendre le champ plus grand */
+    padding: 10px;             /* Espacement interne pour le confort de saisie */
+    font-size: 14px;           /* Taille du texte à l'intérieur */
+    border: 1px solid #ccc;   /* Bordure fine et discrète */
+    border-radius: 5px;       /* Bords arrondis pour un design plus agréable */
+    resize: vertical;         /* Permet à l'utilisateur de redimensionner le champ en hauteur uniquement */
+}
+
+/* Ajouter de l'espace entre l'en-tête et la première bulle ainsi qu'entre les bulles */
+#tarifs-page {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 50px; /* Ajout d'une marge à droite et à gauche */
+    margin-top: 60px; /* Espace entre l'en-tête et les sections */
+}
+
+/* Styles pour chaque section tarifaire */
+#tarifs-page .tarif-section {
+    background-color: #fff;
+    border-radius: 10px;
+    padding: 30px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    margin-bottom: 30px; /* Espace entre chaque bulle */
+    height: auto; /* Ajuste automatiquement la hauteur */
+    min-height: 300px; /* Hauteur minimale */
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    overflow: hidden;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+	max-width: 1000px; /*largeur de la bulle */
+    max-width: 1000px; /* Limite la largeur de la bulle */
+    margin: 0 auto; /* Centre chaque bulle */
+}
+
+/* Si vous voulez également un espacement entre chaque bulle sur la largeur, ajoutez une marge entre elles */
+#tarifs-page .tarif-section:not(:first-child) {
+    margin-top: 30px; /* Espace entre les sections */
+}
+
+#tarifs-page .tarif-section:last-child {
+    margin-bottom: 30px; /* Espace en bas de la dernière section */
+}
+
+
+/* Au survol, on agrandit la "bulle" */
+#tarifs-page .tarif-section:hover {
+    transform: scale(1.05); /* Agrandir la bulle */
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.2); /* Ombre plus marquée */
+}
+
+/* Titre du tarif */
+#tarifs-page .tarif-header {
+    font-family: 'Lora', sans-serif;
+    text-align: center;
+    font-size: 1.4em;
+    color: #0d47a1;
+    margin-bottom: 40px;
+}
+
+/* Titre du service dans la bulle */
+#tarifs-page .tarif-service h3 {
+    font-family: 'Lora', sans-serif;
+    font-size: 2em;
+    color: #333;
+    margin-bottom: 15px;
+}
+
+/* Texte descriptif dans chaque bulle */
+#tarifs-page .tarif-text {
+    flex: 1;
+    font-family: 'Lora', serif;
+    color: #555;
+	padding: 20px;
+    line-height: 1.7;
+    text-align: justify;
+}
+
+.pricing {
+    margin-top: 15px;  /* Ajoute un espace entre le texte et le prix */
+    font-size: 18px;    /* Ajuste la taille si nécessaire */
+    font-weight: bold;  /* Rend le prix plus visible */
+    color: #333;        /* Assure une bonne lisibilité */
+}
+
+/* Style des prix */
+#tarifs-page .tarif-service .pricing {
+    font-size: 1.5em;
+    font-weight: bold;
+    color: #0d47a1;
+    margin-top: 20px;
+}
+
+/* Effet de liste à puces */
+#tarifs-page .tarif-service ul {
+    font-size: 1.15em;
+    margin-left: 30px;
+    list-style-type: disc;
+    line-height: 1.6;
+}
+
+/* Effet général sur les sections avec tarification */
+#tarifs-page .tarif-content {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 40px;
+}
+
+#tarifs-page .tarif-photo {
+    width: 40%;
+	padding: 0 20px;
+    border-radius: 30px;
+    object-fit: cover; 
+    
+	box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+#tarifs-page .tarif-section {
+    background-color: #f4f7f6;
+    padding: 60px 0;
+}
+
+#tarifs-page .tarif-text {
+    font-family: 'Lora', serif;
+    color: #555;
+    line-height: 1.7;
+	word-spacing: 0px; /* Réduit l'espacement entre les mots */
+    text-align: justify;
+}
+
+/* Apparence au survol des services */
+#tarifs-page .tarif-service {
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+/* Agrandissement de la bulle lors du survol */
+#tarifs-page .tarif-service:hover {
+    transform: scale(1.05);
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+}
+/* Stylisation du numéro de téléphone pour la page tarifs */
+
+
+/* Stylisation du numéro de téléphone */
+#contact .tarif-phone-number {
+    margin-top: 30px;
+    text-align: center;
+    font-size: 1.0em;
+    font-weight: bold;
+}
+
+/* Stylisation du lien du numéro de téléphone */
+#contact .tarif-phone-number a {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    background-color: #4B0082; /* Violet Profond */
+    color: white;
+    padding: 12px 20px;
+    border-radius: 25px;
+    text-decoration: none;
+    transition: background-color 0.3s ease, transform 0.3s ease;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
+}
+
+/* Effet au survol du lien */
+#contact .tarif-phone-number a:hover {
+    background-color: #6A0DAD; /* Violet Royal */
+    transform: scale(1.1);
+}
+
+/* Icône du téléphone à côté du numéro */
+#contact .tarif-phone-number a i {
+    margin-right: 8px;
+    font-size: 1.3em;
+}
+
+
+
+
+/* Par défaut sur mobile, affiche la description sans hover */
+@media (max-width: 768px) {
+
+
+/* Conteneur de la pages site (l'impression de 2 pages) */
+.content-wrapper-pages {
+  max-width: 1200px;
+    margin: 50px auto;
+    padding: 30px;
+    background-color: rgba(255, 255, 255, 0.8); /* Transparence */
+    border-radius: 20px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+	padding-top: 50px;
+}	
+
+	
+/* Conteneur */
+.header-wrapper .container {
+    max-width: 768px;
+    margin: 0 auto;
+	height: 45px; 
+    position: relative;
+    z-index: 2; /* Permet de rendre le contenu visible par-dessus l'effet */
+	
+}
+	
+/* Titre */
+.header-title {
+    font-family: 'Arial', sans-serif;
+    font-size: 1.8em;
+    margin-bottom: 10px;
+    text-shadow: 2px 2px 6px rgba(0, 0, 0, 0.2);
+    position: relative;
+    z-index: 2; /* Permet de garder le titre devant */
+    opacity: 0;
+    transform: translateY(50px);
+    animation: fadeInUp 1s forwards;
+}
+
+/* Sous-titre */
+.header-subtitle {
+    font-family: 'Helvetica', sans-serif;
+    font-size: 0.8em;
+    line-height: 1.5;
+    margin: 0 auto;
+    width: 80%;
+    text-shadow: 1px 1px 4px rgba(0, 0, 0, 0.2);
+    position: relative;
+    z-index: 2;
+    opacity: 0;
+    transform: translateY(50px);
+    animation: fadeInUp 1.2s forwards;
+    animation-delay: 0.2s;
+}
+
+.video-item {
+    background-color: #fff;
+    border-radius: 22px;
+    overflow: hidden;
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.1);
+    position: relative;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    min-width: 280px;
+    max-width: 500px;
+	width: 300px;
+    flex-shrink: 0;
+}
+
+.video-frame_m {
+    position: relative;
+    overflow: hidden;
+    padding-top: 70.25%; /* Pour garder un ratio de 16:9 */
+    width: 300px;
+}
+
+.phone-number {
+    margin-top: 15px;
+    text-align: center;
+    font-size: 7px;
+    font-weight: bold;
+}
+.coach-photo-pages {
+    width: 80%;
+	height: 350px;
+    max-width: 300px;
+    object-fit: cover;
+    margin: 0 auto;	
+    /* margin-right: 20px;*/
+	box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+ #about .coach-photo {
+    width: 80%;
+	height: 350px;
+    max-width: 300px;
+    margin: 0 auto;
+    border-radius: 20px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    }
+	   .about-content {
+        flex-direction: column; /* Empile les éléments en colonne */
+        gap: 20px; /* Réduit l’espace entre les éléments */
+        width: 100%; /* Prend toute la largeur */
+        text-align: center; /* Centre le texte et l’image */
+        
+	}
+
+ .about-text {
+    width: 95%;
+}
+	
+/* Si tu veux que l'élément prenne toute la largeur sur mobile, tu peux ajouter cette ligne */
+    .service {
+        width: 90%;  /* Réduit la largeur pour mobile */
+		height: 130px; 
+		
+    }
+	
+
+ /* Supprime les effets de survol pour mobile */
+    .service:hover {
+        transform: none;   /* Supprime l'effet de transformation */
+        width: 90%; 
+        height: 300px;         /* Garde la largeur pour mobile */
+    }
+
+  /* Affichage de la description au survol */
+.service:hover .service-description {
+    display: block;
+    opacity: 1;
+}
+
+/* Espacement entre les bulles */
+#tarifs-page .tarif-section:not(:first-child) {
+    margin-top: 20px; /* Réduit l'espace pour une meilleure lisibilité sur mobile */
+}
+
+/* Suppression de l'agrandissement au survol sur mobile pour éviter les comportements indésirables */
+@media (hover: hover) {
+    #tarifs-page .tarif-section:hover {
+        transform: scale(1.05);
+        box-shadow: 0 6px 12px rgba(0, 0, 0, 0.2);
+    }
+}
+
+/* Ajustement du titre */
+#tarifs-page .tarif-header {
+    font-size: 1.2em;
+    margin-bottom: 20px;
+}
+
+/* Ajustement des services dans les bulles */
+#tarifs-page .tarif-service h3 {
+    font-size: 1.5em;
+    margin-bottom: 10px;
+}
+
+#tarifs-page .tarif-text {
+    font-size: 1em;
+    line-height: 1.5;
+}
+
+#tarifs-page .tarif-service .pricing {
+    font-size: 1.3em;
+    margin-top: 15px;
+}
+
+#tarifs-page .tarif-service ul {
+    font-size: 1em;
+    margin-left: 20px;
+    line-height: 1.4;
+}
+
+/* Adaptation de la mise en page pour mobile */
+#tarifs-page .tarif-content {
+    flex-direction: column;
+    gap: 20px;
+    text-align: center;
+}
+
+#tarifs-page .tarif-photo {
+    width: 80%;
+    max-width: 300px;
+    margin: 0 auto;
+    border-radius: 20px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+#tarifs-page .tarif-section {
+    padding: 40px 15px;
+}
+
+h5{
+    text-align: center;
+    margin: 0 auto;
+    font-size: 16px;
+    margin-bottom: 20px;
+	margin-top: 20px;
+    color: #0d47a1;  /* Bleu Indigo */
+}
+
+
+}
+
+
+
+
+@media (max-width: 480px) {
+
+/* Conteneur de la pages site (l'impression de 2 pages) */
+.content-wrapper-pages {
+  max-width: 1200px;
+    margin: 50px auto;
+    padding: 45px;
+    background-color: rgba(255, 255, 255, 0.8); /* Transparence */
+    border-radius: 20px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+	padding-top: 50px;
+}	
+
+/* Conteneur */
+.header-wrapper .container {
+    max-width: 768px;
+    margin: 0 auto;
+	height: 55px; 
+    position: relative;
+    z-index: 2; /* Permet de rendre le contenu visible par-dessus l'effet */
+	
+}
+	
+/* Titre */
+.header-title {
+    font-family: 'Arial', sans-serif;
+    font-size: 1.6em;
+    margin-bottom: 10px;
+    text-shadow: 2px 2px 6px rgba(0, 0, 0, 0.2);
+    position: relative;
+    z-index: 2; /* Permet de garder le titre devant */
+    opacity: 0;
+    transform: translateY(50px);
+    animation: fadeInUp 1s forwards;
+}
+
+/* Sous-titre */
+.header-subtitle {
+    font-family: 'Helvetica', sans-serif;
+    font-size: 0.8em;
+    line-height: 1.5;
+    margin: 0 auto;
+    width: 80%;
+    text-shadow: 1px 1px 4px rgba(0, 0, 0, 0.2);
+    position: relative;
+    z-index: 2;
+    opacity: 0;
+    transform: translateY(50px);
+    animation: fadeInUp 1.2s forwards;
+    animation-delay: 0.2s;
+}
+
+.video-item {
+    background-color: #fff;
+    border-radius: 22px;
+    overflow: hidden;
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.1);
+    position: relative;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    min-width: 280px;
+    max-width: 500px;
+	width: 300px;
+    flex-shrink: 0;
+}
+
+.video-frame_m {
+    position: relative;
+    overflow: hidden;
+    padding-top: 70.25%; /* Pour garder un ratio de 16:9 */
+    width: 300px;
+}
+
+
+.phone-number {
+    margin-top: 15px;
+    text-align: center;
+    font-size: 7px;
+    font-weight: bold;
+}
+
+coach-photo-pages {
+    width: 80%;
+	height: 350px;
+    max-width: 300px;
+    object-fit: cover;
+    margin: 0 auto;	
+    /* margin-right: 20px;*/
+box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+	
+#about .coach-photo{
+    width: 80%;
+	height: 350px;
+    max-width: 300px;
+    margin: 0 auto;
+    border-radius: 20px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    }
+	   .about-content {
+        flex-direction: column; /* Empile les éléments en colonne */
+        gap: 20px; /* Réduit l’espace entre les éléments */
+        width: 100%; /* Prend toute la largeur */
+        text-align: center; /* Centre le texte et l’image */
+    }
+
+ .about-text {
+    width: 95%;
+}
+/* Si tu veux que l'élément prenne toute la largeur sur mobile, tu peux ajouter cette ligne */
+    .service {
+        width: 90%;  /* Réduit la largeur pour mobile */
+		height: 130px; 
+		
+    }
+	
+
+ /* Supprime les effets de survol pour mobile */
+    .service:hover {
+        transform: none;   /* Supprime l'effet de transformation */
+        width: 90%; 
+        height: 300px;         /* Garde la largeur pour mobile */
+    }
+
+  /* Affichage de la description au survol */
+.service:hover .service-description {
+    display: block;
+    opacity: 1;
+}
+
+/* Espacement entre les bulles */
+#tarifs-page .tarif-section:not(:first-child) {
+    margin-top: 20px; /* Réduit l'espace pour une meilleure lisibilité sur mobile */
+}
+
+/* Suppression de l'agrandissement au survol sur mobile pour éviter les comportements indésirables */
+@media (hover: hover) {
+    #tarifs-page .tarif-section:hover {
+        transform: scale(1.05);
+        box-shadow: 0 6px 12px rgba(0, 0, 0, 0.2);
+    }
+}
+
+/* Ajustement du titre */
+#tarifs-page .tarif-header {
+    font-size: 1.2em;
+    margin-bottom: 20px;
+}
+
+/* Ajustement des services dans les bulles */
+#tarifs-page .tarif-service h3 {
+    font-size: 1.0 em;
+    margin-bottom: 10px;
+}
+
+#tarifs-page .tarif-text {
+    font-size: 1em;
+    line-height: 1.5;
+}
+
+#tarifs-page .tarif-service .pricing {
+    font-size: 1.3em;
+    margin-top: 15px;
+}
+
+#tarifs-page .tarif-service ul {
+    font-size: 1em;
+    margin-left: 20px;
+    line-height: 1.4;
+}
+
+/* Adaptation de la mise en page pour mobile */
+#tarifs-page .tarif-content {
+    flex-direction: column;
+    gap: 20px;
+    text-align: center;
+}
+
+#tarifs-page .tarif-photo {
+    width: 80%;
+    max-width: 300px;
+    margin: 0 auto;
+    border-radius: 20px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+#tarifs-page .tarif-section {
+    padding: 40px 15px;
+}
+
+h5{
+    text-align: center;
+    margin: 0 auto;
+    font-size: 16px;
+    margin-bottom: 20px;
+	margin-top: 20px;
+    color: #0d47a1;  /* Bleu Indigo */
+}
+
+}
+
+
+.social-icons {
+    margin-top: 15px;
+    text-align: center;
+}
+
+.social-icons a {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    width: 35px;
+    height: 35px;
+    border-radius: 50%;
+    font-size: 20px;
+    margin: 0 10px;
+    text-decoration: none;
+    color: white;
+    transition: background-color 0.3s ease, transform 0.3s ease;
+}
+
+/* Couleurs officielles de base */
+.social-icons .facebook {
+    background-color: #1877F2;
+}
+
+.social-icons .instagram {
+    background: linear-gradient(45deg, #f9ce34, #ee2a7b, #6228d7);
+}
+
+.social-icons .youtube {
+    background-color: #FF0000;
+}
+
+/* Nouvelle couleur pour Gmail */
+.social-icons .gmail {
+    background-color: #DB4437; /* Couleur rouge typique de Gmail */
+}
+
+/* Couleur pour WhatsApp */
+.social-icons .whatsapp {
+    background-color: #25D366; /* Vert officiel de WhatsApp */
+    border-radius: 50%; /* Pour arrondir l'icône */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 40px; /* Ajuster la taille de l'icône */
+    height: 40px;
+}
+
+/* Effet au survol */
+.social-icons .facebook:hover {
+    background-color: #4267B2; /* Bleu plus foncé officiel */
+}
+
+.social-icons .instagram:hover {
+    background: linear-gradient(45deg, #ff9900, #ff5a5f, #c13584); /* Teintes plus chaudes */
+}
+
+.social-icons .youtube:hover {
+    background-color: #CC0000; /* Rouge plus foncé officiel */
+}
+
+/* Effet au survol pour Gmail */
+.social-icons .gmail:hover {
+    background-color: #C13584; /* Couleur rose/violet typique de Gmail */
+}
+
+/* Effet au survol pour WhatsApp */
+.social-icons .whatsapp:hover {
+    background-color: #1EBEA5; /* Teinte plus foncée de vert */
+}
+
+.social-icons a:hover {
+    transform: scale(1.1);
+}
+
+
+.phone-number {
+    margin-top: 15px;
+    text-align: center;
+    font-size: 18px;
+    font-weight: bold;
+}
+
+.phone-number a {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    background-color: #4B0082; /* Violet Profond */
+    color: white;
+    padding: 10px 20px;
+    border-radius: 25px;
+    text-decoration: none;
+    transition: background-color 0.3s ease, transform 0.3s ease;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
+}
+
+
+
+.phone-number a:hover {
+    background-color: #6A0DAD; /* Violet Royal */
+    transform: scale(1.1);
+}
+
+.google-review-button {
+    display: flex;
+    background-color: #4285F4;
+    color: white;
+    padding: 10px 20px;
+    border-radius: 5px;
+    text-decoration: none;
+    font-weight: bold;
+	text-align: center;
+	justify-content: center;
+    transition: background-color 0.3s;
+	
+    justify-content: center; /* Centre horizontalement */
+    align-items: center;
+    margin: 20px auto; /* Centre avec une marge automatique */
+   
+    width: fit-content; /* Ajuste la largeur au contenu */
+}
+.google-review-button:hover {
+    background-color: #357ae8;
+}
+
+ .payment-container {
+        margin-top: 20px;
+        text-align: center;
+    }
+
+#paypal-button-50 {
+   display: flex;
+    background-color: #4285F4;
+    color: white;
+    padding: 10px 20px;
+    border-radius: 5px;
+    text-decoration: none;
+    font-weight: bold;
+	text-align: center;
+	justify-content: center;
+    transition: background-color 0.3s;
+	
+    justify-content: center; /* Centre horizontalement */
+    align-items: center;
+    margin: 20px auto; /* Centre avec une marge automatique */
+   
+    width: fit-content; /* Ajuste la largeur au contenu */
+}
+
+#paypal-button-90 {
+   display: flex;
+    background-color: #4285F4;
+    color: white;
+    padding: 10px 20px;
+    border-radius: 5px;
+    text-decoration: none;
+    font-weight: bold;
+	text-align: center;
+	justify-content: center;
+    transition: background-color 0.3s;
+	
+    justify-content: center; /* Centre horizontalement */
+    align-items: center;
+    margin: 20px auto; /* Centre avec une marge automatique */
+   
+    width: fit-content; /* Ajuste la largeur au contenu */
+}
+
+
+#paypal-button-360 {
+   display: flex;
+    background-color: #4285F4;
+    color: white;
+    padding: 10px 20px;
+    border-radius: 5px;
+    text-decoration: none;
+    font-weight: bold;
+	text-align: center;
+	justify-content: center;
+    transition: background-color 0.3s;
+	
+    justify-content: center; /* Centre horizontalement */
+    align-items: center;
+    margin: 20px auto; /* Centre avec une marge automatique */
+   
+    width: fit-content; /* Ajuste la largeur au contenu */
+}
+
+#paypal-button-600 {
+   display: flex;
+    background-color: #4285F4;
+    color: white;
+    padding: 10px 20px;
+    border-radius: 5px;
+    text-decoration: none;
+    font-weight: bold;
+	text-align: center;
+	justify-content: center;
+    transition: background-color 0.3s;
+	
+    justify-content: center; /* Centre horizontalement */
+    align-items: center;
+    margin: 20px auto; /* Centre avec une marge automatique */
+   
+    width: fit-content; /* Ajuste la largeur au contenu */
+}
+
+
+

@@ -752,7 +752,6 @@ footer {
     min-width: 280px;
     max-width: 500px;
 	width: 280px;
-	height:250px;
     flex-shrink: 0;
 }
 
@@ -933,7 +932,6 @@ box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
     min-width: 280px;
     max-width: 500px;
 	width: 280px;
-	height:250px;
     flex-shrink: 0;
 }
 

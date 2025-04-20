@@ -428,7 +428,7 @@ footer {
 #tarifs-page .tarif-header {
     font-family: 'Lora', sans-serif;
     text-align: center;
-    font-size: 1.8em;
+    font-size: 1.5em;
     color: #0d47a1;
     margin-bottom: 40px;
 }
@@ -896,13 +896,13 @@ box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
 
 /* Ajustement du titre */
 #tarifs-page .tarif-header {
-    font-size: 1.8em;
+    font-size: 1.5em;
     margin-bottom: 20px;
 }
 
 /* Ajustement des services dans les bulles */
 #tarifs-page .tarif-service h3 {
-    font-size: 1.5em;
+    font-size: 1.0 em;
     margin-bottom: 10px;
 }
 

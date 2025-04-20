@@ -168,7 +168,7 @@ h4 {
     gap: 30px;
     justify-content: flex-start;
     padding-bottom: 20px;
-	
+	height: 300px;
 }
 
 .video-item {
@@ -179,29 +179,25 @@ h4 {
     position: relative;
     transition: transform 0.3s ease, box-shadow 0.3s ease;
     min-width: 280px;
-    max-width: 350px;
-    width: 100%;
+    max-width: 500px;
     flex-shrink: 0;
 }
 
-
-
-.video-frame {
+.video-frame_m {
     position: relative;
-    width: 100%;
-    padding-top: 56.25%; /* Ratio 16:9 */
     overflow: hidden;
+    padding-top: 70.25%; /* Pour garder un ratio de 16:9 */
+    width: 400px;
+	height: 300px;
 }
 
-.video-frame iframe {
+.video-iframe {
     position: absolute;
     top: 0;
     left: 0;
     width: 100%;
     height: 100%;
-    border: 0;
 }
-
 
 .video-item:hover {
     transform: translateY(-20px);
@@ -650,8 +646,6 @@ footer {
 
 /* Par défaut sur mobile, affiche la description sans hover */
 @media (max-width: 768px) {
-	
-
 
 /* Couleur pour WhatsApp */
 .social-icons .whatsapp {

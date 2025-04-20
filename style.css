@@ -650,6 +650,8 @@ footer {
 
 /* Par défaut sur mobile, affiche la description sans hover */
 @media (max-width: 768px) {
+	
+	
 
 /* Couleur pour WhatsApp */
 .social-icons .whatsapp {
@@ -744,6 +746,11 @@ footer {
 .service:hover .service-description {
     display: block;
     opacity: 1;
+}
+
+.video-item:hover {
+    transform: none;
+    box-shadow: 0 12px 24px rgba(0, 0, 0, 0.2);
 }
 
 /* Espacement entre les bulles */
@@ -906,6 +913,11 @@ box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
 .service:hover .service-description {
     display: block;
     opacity: 1;
+}
+
+.video-item:hover {
+    transform: none;
+    box-shadow: 0 12px 24px rgba(0, 0, 0, 0.2);
 }
 
 /* Espacement entre les bulles */

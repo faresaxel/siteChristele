@@ -746,6 +746,15 @@ footer {
     padding: 40px 15px;
 }
 
+h5{
+    text-align: center;
+    margin: 0 auto;
+    font-size: 16px;
+    margin-bottom: 20px;
+	margin-top: 20px;
+    color: #0d47a1;  /* Bleu Indigo */
+}
+
 
 }
 
@@ -941,6 +950,14 @@ box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
     padding: 40px 15px;
 }
 
+h5{
+    text-align: center;
+    margin: 0 auto;
+    font-size: 16px;
+    margin-bottom: 20px;
+	margin-top: 20px;
+    color: #0d47a1;  /* Bleu Indigo */
+}
 
 }
 

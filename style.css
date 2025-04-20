@@ -168,7 +168,6 @@ h4 {
     gap: 30px;
     justify-content: flex-start;
     padding-bottom: 20px;
-	height: 300px;
 }
 
 .video-item {
@@ -188,7 +187,6 @@ h4 {
     overflow: hidden;
     padding-top: 70.25%; /* Pour garder un ratio de 16:9 */
     width: 400px;
-	height: 300px;
 }
 
 .video-iframe {

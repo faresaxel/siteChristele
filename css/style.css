@@ -444,7 +444,7 @@ footer {
     flex: 1;
     font-family: 'Lora', serif;
     color: #555;
-	padding: 20px;
+	padding: 50px;
     line-height: 1.7;
     text-align: justify;
 	margin-bottom: 10px;
@@ -472,7 +472,7 @@ footer {
     align-items: center;
     justify-content: space-between;
     gap: 40px;
-	margin-bottom: 20px;
+	
 }
 
 #tarifs-page .tarif-photo {
@@ -494,6 +494,7 @@ footer {
     color: #555;
     line-height: 1.7;
     text-align: justify;
+	padding: px;
 }
 
 /* Apparence au survol des services */

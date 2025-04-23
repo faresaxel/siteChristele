@@ -82,7 +82,7 @@ h4 {
     width: 60%;
 }
 
-/* Style général des services **/
+/* Style général des services */
 .services-list {
     display: flex;
     justify-content: space-around;
@@ -98,7 +98,7 @@ h4 {
     background-color: #fff;
     padding: 17px;
     border-radius: 8px;
-    box-shadow: 0 -4px 6px rgba(0, 0, 0, 0.1), 0 4px 6px rgba(0, 0, 0, 0.1);
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
     text-align: center;
     border-left: 5px solid #0d47a1;  /* Bleu Indigo */
     position: relative;
@@ -259,21 +259,6 @@ footer {
     background-color: rgba(255, 255, 255, 0.8); /* Transparence */
     border-radius: 10px;
     box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
-    margin-bottom: -25px;
-
-}
-
-/* Conteneur de la page principale (l'impression de 2 pages) */
-.content-wrapper-reseaux {
-    max-width: 1200px;
-    margin: 50px auto;
-    padding: 30px;
-    background-color: rgba(255, 255, 255, 0.8); /* Transparence */
-    border-radius: 10px;
-    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
-    margin-bottom: -25px;
-	 margin-top: 205px;
-
 }
 
 /* Conteneur de la pages site (l'impression de 2 pages) */
@@ -292,10 +277,7 @@ footer {
     color: white;
     text-align: center;
     padding: 50px 0;
-    position: fixed;
-	top: 0;
-    left: 0;
-    width: 100%;
+    position: relative;
 	z-index: 1000;
     overflow: hidden; /* Cache tout ce qui dépasse */
     box-shadow: 0 8px 24px rgba(0, 0, 0, 0.2); /* Ombre pour un effet de profondeur */
@@ -305,7 +287,6 @@ footer {
 /* Conteneur */
 .header-wrapper .container {
     max-width: 1200px;
-
     margin: 0 auto;
     position: relative;
     z-index: 2; /* Permet de rendre le contenu visible par-dessus l'effet */
@@ -314,7 +295,7 @@ footer {
 /* Titre */
 .header-title {
     font-family: 'Arial', sans-serif;
-    font-size: 1.5em;
+    font-size: 2.1em;
     margin-bottom: 15px;
     text-shadow: 2px 2px 6px rgba(0, 0, 0, 0.2);
     position: relative;
@@ -338,14 +319,6 @@ footer {
     transform: translateY(50px);
     animation: fadeInUp 1.2s forwards;
     animation-delay: 0.2s;
-}
-
-.logo img {
-    height: 120px;
-    width: auto;
-    margin-bottom: 5px;
-	margin-bottom: -15px;
-	
 }
 
 /* Animation de l'apparition du titre et du sous-titre */
@@ -444,10 +417,9 @@ footer {
     flex: 1;
     font-family: 'Lora', serif;
     color: #555;
-	padding: 50px;
+	padding: 20px;
     line-height: 1.7;
     text-align: justify;
-	margin-bottom: 10px;
 }
 
 /* Style des prix */
@@ -472,7 +444,6 @@ footer {
     align-items: center;
     justify-content: space-between;
     gap: 40px;
-	
 }
 
 #tarifs-page .tarif-photo {
@@ -494,7 +465,6 @@ footer {
     color: #555;
     line-height: 1.7;
     text-align: justify;
-	padding: px;
 }
 
 /* Apparence au survol des services */
@@ -620,7 +590,7 @@ footer {
 .phone-number {
     margin-top: 15px;
     text-align: center;
-    font-size: 15px;
+    font-size: 18px;
     font-weight: bold;
 }
 
@@ -691,7 +661,7 @@ footer {
 /* Titre */
 .header-title {
     font-family: 'Arial', sans-serif;
-    font-size: 1.2em;
+    font-size: 1.5em;
     margin-bottom: 15px;
     text-shadow: 2px 2px 6px rgba(0, 0, 0, 0.2);
     position: relative;
@@ -871,7 +841,7 @@ footer {
 /* Titre */
 .header-title {
     font-family: 'Arial', sans-serif;
-    font-size: 1.2em;
+    font-size: 1.5em;
     margin-bottom: 15px;
     text-shadow: 2px 2px 6px rgba(0, 0, 0, 0.2);
     position: relative;

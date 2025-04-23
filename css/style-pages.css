@@ -394,8 +394,8 @@ footer {
     background-color: #fff;
     border-radius: 10px;
     padding: 30px;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1),0 -4px 8px rgba(0, 0, 0, 0.1);
-    margin-bottom: 300px; /* Espace entre chaque bulle */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    margin-bottom: 30px; /* Espace entre chaque bulle */
     height: auto; /* Ajuste automatiquement la hauteur */
     min-height: 300px; /* Hauteur minimale */
     display: flex;
@@ -410,7 +410,7 @@ footer {
 
 /* Si vous voulez également un espacement entre chaque bulle sur la largeur, ajoutez une marge entre elles */
 #tarifs-page .tarif-section:not(:first-child) {
-    margin-top: 100px; /* Espace entre les sections */
+    margin-top: 30px; /* Espace entre les sections */
 }
 
 #tarifs-page .tarif-section:last-child {
@@ -776,7 +776,7 @@ h5{
 
 /* Conteneur */
 .header-wrapper .container {
-    max-width: 768px;
+    max-width: 480px;
     margin: 0 auto;
 	height: 55px; 
     position: relative;

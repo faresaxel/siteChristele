@@ -75,6 +75,15 @@ h7{
     color: #0d47a1;  /* Bleu Indigo */
 }
 
+h8{
+    text-align: center;
+    margin: 0 auto;
+    font-size: 14px;
+    margin-bottom: 20px;
+	margin-top: 20px;
+    color: #0d47a1;  /* Bleu Indigo */
+}
+
 h1, h2, h3, h4 ,h5, h6{
     font-family: 'Playfair Display', serif;
 }
@@ -934,7 +943,7 @@ footer {
 h5{
     text-align: center;
     margin: 0 auto;
-    font-size: 16px;
+    font-size: 14px;
     margin-bottom: 20px;
 	margin-top: 20px;
     color: #0d47a1;  /* Bleu Indigo */
@@ -1151,7 +1160,7 @@ box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
 h5{
     text-align: center;
     margin: 0 auto;
-    font-size: 16px;
+    font-size: 14px;
     margin-bottom: 20px;
 	margin-top: 20px;
     color: #0d47a1;  /* Bleu Indigo */

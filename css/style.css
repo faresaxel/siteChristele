@@ -52,6 +52,15 @@ h4 {
     color: #0d47a1;  /* Bleu Indigo */
 }
 
+h1, h2, h3, h4 {
+    font-family: 'Playfair Display', serif;
+}
+
+body, p {
+    font-family: 'Lora', serif;
+}
+
+
 /* À propos */
 .about-content {
     display: flex;
